@@ -42,3 +42,7 @@
   width: 150px;
   height: auto;
 }
+.header {
+  max-width: 1200px;
+  margin: auto;
+}
