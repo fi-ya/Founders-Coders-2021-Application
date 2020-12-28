@@ -132,3 +132,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+.footer-container{
+  background-color: black;
+  position: relative;
+  width: 100vw;
+  height: 20vh;
+  margin-left: auto;
+  margin-right: auto;
+}
