@@ -46,3 +46,20 @@
   max-width: 1200px;
   margin: auto;
 }
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate (-50%, -50%);
+}
+
+.title h1{
+  color:#ffffff;
+  font-size: 60px;
+}
+
+.title h2 {
+  color:#ffffff;
+  font-size: 30px;
+}
