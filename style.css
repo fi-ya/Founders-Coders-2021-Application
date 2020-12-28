@@ -37,4 +37,8 @@
     color: #000000;
   }
 
-
+.logo img{
+  float: left;
+  width: 150px;
+  height: auto;
+}
