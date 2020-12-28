@@ -101,7 +101,7 @@
   margin-right: auto;
 }
 .paint{
-  background-color: white;
+  background-color: #637259; 
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -109,7 +109,7 @@
   margin-right: auto;
 }
 .FAC{
-  background-color: olive;
+  background-color: #f5dce0;
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -125,7 +125,7 @@
   margin-right: auto;
 }
 .contact{
-  background-color: powderblue;
+  background-color: #637259; /* #596372;*/
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -133,7 +133,7 @@
   margin-right: auto;
 }
 .footer-container{
-  background-color: black;
+  background-color: rgb( 114,89, 99);
   position: relative;
   width: 100vw;
   height: 20vh;
