@@ -1,49 +1,65 @@
+/* --GLOBAL STYLES -- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
- 
- 
- header {
-      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background-img.jpeg');
-      height:100vh;
-      width: 100vw;
-      background-size: cover;
-      background-position:center;
-  } 
+html {
+  scroll-behavior: smooth;
+}
 
-  ul{
-    float: right;
-    list-style-type: none;
-    margin-top: 25px;
-    margin-right: 25px;
-    /* display: flex;
+
+body{
+
+}
+
+/* -- HOMEPAGE STYLES -- */
+.homepage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("background-img.jpeg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+}
+/* -- NAV STYLES -- */
+ul {
+  float: right;
+  list-style-type: none;
+  margin-top: 25px;
+  margin-right: 25px;
+  /* display: flex;
     flex-direction:row;
     justify-content: space-evenly; */
-  }
+}
 
-  ul li {
-    display: inline-block;
-  }
+ul li {
+  display: inline-block;
+}
 
-  ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    padding:5px 20px;
-    /* border: 1px solid #ffffff; */
-    transition: 0.6s ease;
-    border-radius: 100rem;
-    /* box-shadow: 0 10px 20px rgba(255,255,255,0.19); */ 
-  }
+ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 8px 10px 8px 10px;
+  /* border: 1px solid #ffffff; */
+  transition: 0.6s ease;
+  border-radius: 50em;
+  /* box-shadow: 0 10px 20px rgba(255,255,255,0.19); */
+}
 
-  ul li a:hover{
-    background-color: #ffffff;
-    color: #000000;
-  }
+ul li a:hover {
+  background-color: white;
+  color: #000000;
+}
 
-  ul li a.active {
-    background-color: #ffffff;
-    color: #000000;
-  }
+ul li a.active {
+  background-color: white;
+  color: #000000;
+}
 
-.logo img{
+.logo img {
   float: left;
   width: 10vw;
   height: auto;
@@ -61,13 +77,13 @@
   transform: translate (-50%, -50%);
 }
 
-.title h1{
-  color:#ffffff;
+.title h1 {
+  color: #ffffff;
   font-size: 60px;
 }
 
 .title h2 {
-  color:#ffffff;
+  color: #ffffff;
   font-size: 30px;
 }
 
@@ -79,68 +95,99 @@
 }
 
 .btn {
-    text-decoration: none;
-    color: #ffffff;
-    padding:10px 30px;
-    border: 1px solid #ffffff;
-    transition: 0.6s ease;
-    /* border-radius: 100rem; */
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 30px;
+  border: 1px solid #ffffff;
+  transition: 0.6s ease;
+  /* border-radius: 100rem; */
 }
 
-.btn:hover{
-    background-color: #ffffff;
-    color: #000000;
+.btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+/* -- ABOUT STYLES -- */
+.about {
+  background-color: #DDCBD0;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
 }
 
-.about{
-  background-color: #bc8f8f;
+.about h2 {
+  position: relative;
+  justify-items:center ;
+  margin: 0em 2em 2em 2em;
+
+  color: white;
+  
+}
+.me-p{
+  display: inline-block;
+max-width: 60ch;
+margin-right: auto;
+margin-left: 2em;
+color: white;
+}
+.img-container {
+ display:inline-block;
+ width: 50vh;
+ height:auto;
+ margin-left: 4em;
+}
+.me-img{  
+  position: relative;
+  float: right;
+  max-width: 100%;
+  height: auto;
+
+}
+/* -- PAINT STYLES -- */
+.paint {
+  background-color: #815C61;
   position: relative;
   width: 100vw;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
 }
-.me-img {
-    position: relative;
-    float: right;
-    max-width: 100%;
-    height: 200px;
-   
-}
-.paint{
-  background-color: #637259;  
+/* -- FAC STYLES -- */
+
+.FAC {
+  background-color: #916F68;
+   /* #f5dce0; */ 
   position: relative;
   width: 100vw;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
 }
-.FAC{
-  background-color: #f5dce0;
+
+/* -- DRY EYE STYLES -- */
+.dry-eyes {
+  background-color: white;
   position: relative;
   width: 100vw;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
 }
-.dry-eyes{
-  background-color: rosybrown;
+
+/* -- CONTACT STYLES -- */
+.contact {
+  background-color: #DDCBD0; /* #596372;*/
   position: relative;
   width: 100vw;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
 }
-.contact{
-  background-color: #637259; /* #596372;*/
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-}
-.footer-container{
-  background-color: rgb( 114,89, 99);
+
+/* -- FOOTER STYLES -- */
+.footer-container {
+  background-color: #4E3D40;
   position: relative;
   width: 100vw;
   height: 20vh;
