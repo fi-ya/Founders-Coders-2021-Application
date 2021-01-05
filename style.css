@@ -1,8 +1,8 @@
 /* -- RESET STYLES -- */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; /* makes styling width easier*/
+  margin: 0; /* makes everything line up to border of screen*/
+  padding: 0; /* makes everything line up to border of screen*/
 }
 
 html {
@@ -25,49 +25,124 @@ body{
 }
 
 /* -- NAV STYLES -- */
-ul {
-  float: right;
-  list-style: none;
-  margin-top: 25px;
-  margin-right: 25px;
-  /* display: flex;
-  flex-direction:row;
-  justify-content: space-evenly; */
+
+.navbar {
+  display: flex; /* line side by side*/
+  justify-content: space-between; /* push as far apart as possible*/
+  align-items: center; /* makes everything line up to border of screen*/
+  /* background-color: purple; */
+  
+}
+.navlinks ul { 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+  /* flex-direction:row;
+  justify-content: space-evenly; */ 
 }
 
-ul li {
-  display: inline-block;
+.navlinks li {
+  
+  list-style: none; /* remove bullet points*/
+  
 }
 
-ul li a {
-  text-decoration: none;
+.navlinks li a {
+  text-decoration: none; /* remove underline*/
   color: white;
   text-transform: lowercase;
-  padding: 8px 10px 8px 10px;
+  padding: 1rem;
+  display: block; /* show up as larger size*/
   /* border: 1px solid #ffffff; */
   transition: 0.6s ease;
-  border-radius: 50em;
+  border-radius: 1.4rem;
   /* box-shadow: 0 10px 20px rgba(255,255,255,0.19); */
+  
 }
 
-ul li a:hover {
-  background-color: white;
+.navlinks li a:hover {
+  background-color: white; /* change on hover*/
   color: #000000;
 }
 
-ul li a.active {
-  background-color: white;
+.navlinks li a.home {  
+  background-color: white; /* home stays white*/
   color: #000000;
 }
 
 .logo img {
-  float: left;
-  width: 10vw;
+  width: 6rem;
   height: auto;
+  margin: .5rem;
+  
 }
+
+.toggle-btn{
+position: absolute; /* force to RS of screen + not disturb flow*/
+top: 2rem; /* not quite from top of screen*/
+right: 1rem;
+display: none; /* by default dont show - flex if showing*/
+flex-direction: column; /* spans line up T-B*/
+justify-content: space-between; /* as much space btwn line*/
+width: 30px;
+height: 21px;
+}
+
+.toggle-btn .bar {
+  height: 0.2rem; 
+  width: 100%; /* fill toggle-btn container */
+  background-color: white;
+  border-radius: 1rem; /* round corners of bars */
+}
+
+@media (max-width: 600px){ /* if screen <600px wide do this*/
+  .toggle-btn {
+    display: flex; /* reveal toggle*/
+  }
+
+  .navlinks {
+    display: none;/* links hidden*/
+    width: 100%; /* li item span width of container*/
+    height: 100vh; /* not sure if 33 or 45*/
+  }
+
+  .navbar{
+    flex-direction: column; /* links below logo*/
+    align-items: flex-start; /* logo back on left */
+    
+  
+  }
+  .navlinks ul {
+    width: 100%; 
+    flex-direction: column; /* links stacked */
+    
+    background-color: #815C61; /* navbar background color*/
+    
+  }
+
+  .navlinks li {
+    text-align: center; /* links in center */
+  }
+
+  .navlinks li a {
+    padding: 1.7rem 1rem; /* a tags space closer together */
+    border-radius: 0; /* remove border radius*/
+    
+  }
+  /* .homepage-welcome {
+    display: none; /* hide welcome container
+  } */
+
+  div.active{
+    display: flex; /* when active display links */
+    z-index: 3;
+  }
+}
+
 /* -- HOMEPAGE STYLES -- */
 .homepage-container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   position: relative;
   margin: auto;
 }
@@ -130,7 +205,7 @@ ul li a.active {
   
 }
 .me-p{
-  display: inline-block;
+display: inline-block;
 max-width: 60ch;
 margin-right: auto;
 margin-left: 2em;
