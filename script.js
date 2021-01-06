@@ -18,3 +18,18 @@ var counter = 0;
         }
         // repeat every 1 second (in milliseconds)
         }, 1000); 
+
+//
+function checkAnswer(answer, radiobuttonName){
+
+    var radioButtons = document.getElementsByName(radiobuttonName);
+    for(var i = 0; i < radioButtons.length; i++){
+        if(radioButtons[i].checked == true && radioButtons[i].value === answer){ 
+            alert("You have selected " + radioButtons[i].value + " as your answer.                                                   ☆彡(ノ^ ^)ノ Congratulations ヘ(^ ^ヘ)☆彡                                    That is the correct answer!!");
+        }       
+        else if(radioButtons[i].checked == true && radioButtons[i].value !== answer){ 
+            alert("You have selected " + radioButtons[i].value + " as your answer. Sorry that is the wrong answer. Please try again. ≧◠‿◠≦ ✌❤✌");
+        }
+    }
+}
+

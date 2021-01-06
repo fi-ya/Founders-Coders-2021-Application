@@ -40,21 +40,25 @@ body{
 .navlinks li {
   list-style: none; /* remove bullet points*/
 }
-.navlinks li a {
-  margin-left: 0rem;
-  text-decoration: none; /* remove underline*/
-  color: white;
-  text-transform: lowercase;
-  padding: 10px 25px;
-  display: block; /* show up as larger size*/
-  transition: 0.6s ease;
-  border-radius: 1.5rem;
-  /* border: 1px solid #ffffff; */
-  /* box-shadow: 0 10px 20px rgba(255,255,255,0.19); */
+.buttonstyle-light{
+margin-left: 0rem;
+text-decoration: none; /* remove underline*/
+color: white;
+text-transform: lowercase;
+padding: 10px 25px;
+display: block; /* show up as larger size*/
+transition: 0.6s ease;
+border-radius: 1.5rem;
 }
-.navlinks li a:hover {
+.buttonstyle-light:hover{
   background-color: white; /* change on hover*/
   color: #000000;
+}
+
+.navlinks li a {
+
+  /* border: 1px solid #ffffff; */
+  /* box-shadow: 0 10px 20px rgba(255,255,255,0.19); */
 }
 .navlinks li a.home {  
   background-color: white; /* home stays white*/
@@ -124,6 +128,7 @@ height: 21px;
 }
 .homepage-welcome {
   position: absolute;
+  height:4rem;
   top:33%;
   left: 25%;
   transform:translate ( -50%, -50%);
@@ -219,7 +224,7 @@ height: 21px;
   background-color: rgb(129, 92, 97);
   display:grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 3fr;
   grid-template-areas: 
   "title title"
   "carousel radiobutton";
@@ -233,6 +238,7 @@ height: 21px;
 }
 .paint-title{
   grid-area: title;
+  
 }
 .paint-carousel{
   grid-area:carousel;
@@ -240,16 +246,30 @@ height: 21px;
 }
 .paint-radiobtn{
   grid-area: radiobutton;
-  background-color: palegreen;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  
+  
+
 }
 
 .paint-radiobtn-q{
 
+  margin-bottom: 1rem;
 }
 .paint-radiobtn-btn{
 
 }
 
+.answer-button{
+margin:1rem;
+}
+
+.answer-button button{
+  border-radius: 1rem;
+
+}
 /* ------ Media Query for Pain Section ------ */
 
 @media only screen and (max-width:600px){
@@ -264,8 +284,8 @@ height: 21px;
 #fac-container {
   background-color:rgb(187, 143, 151);
   display:grid;
-  grid-template-columns: 1fr 1.5fr 1.5fr;
-  grid-template-rows: 1fr 3fr 5fr;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr;
+  grid-template-rows: 1fr 3fr 3fr;
   grid-template-areas: 
   "title title title"
   "fac fac fac"
