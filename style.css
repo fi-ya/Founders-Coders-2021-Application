@@ -156,8 +156,8 @@ height: 21px;
 }
     /* ------ ABOUT STYLES ------ */
 
-.about {
-  background-color: #DDCBD0;
+.about-section {
+  background-color: rgb(233, 220, 224);
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -166,14 +166,15 @@ height: 21px;
   position: relative;
   justify-items:center ;
   margin: 0em 2em 2em 2em;
-  color: #4E3D40;
+  color: rgb(78, 61, 64);
+
 }
 .me-p{
 display: inline-block;
 max-width: 60ch;
 margin-right: auto;
 margin-left: 2em;
-color: #4E3D40;
+color: rgb(78, 61, 64);
 }
 .img-container {
  display:inline-block;
@@ -186,14 +187,14 @@ color: #4E3D40;
   float: right;
   max-width: 100%;
   height: auto;
-  border: 5px solid #555;
+  border: 5px solid rgb(78, 61, 64);
 }
 
 
     /* ------ PAINT STYLES ------ */
 
 .paint {
-  background-color: #815C61;
+  background-color: rgb(129, 92, 97);
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -205,7 +206,7 @@ color: #4E3D40;
     /* ------ FAC STYLES ------ */
 
 .FAC {
-  background-color: #916F68;
+  background-color: rgb(145, 111, 104);
    /* #f5dce0; */ 
   position: relative;
   width: 100vw;
@@ -228,7 +229,7 @@ color: #4E3D40;
     /* ------ CONTACT STYLES ------ */
 
 .contact {
-  background-color: #DDCBD0; /* #596372;*/
+  background-color: rgb(233, 220, 224); /* #596372;*/
   position: relative;
   width: 100vw;
   height: 100vh;
