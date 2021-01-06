@@ -1,5 +1,5 @@
     /* ------ RESET STYLES ------ */
-* {
+*, *::before, *::after {
   box-sizing: border-box; /* makes styling width easier*/
   margin: 0; /* makes everything line up to border of screen*/
   padding: 0; /* makes everything line up to border of screen*/
@@ -9,11 +9,14 @@ html {
 }
 
 :root{
- --cursive-font:font-family:'Dancing Script', cursive;
- --main-font: font-family:'Raleway', sans-serif;
+ --cursive-font: 'Shadows Into Light', cursive;
+ --main-font: 'Montserrat', sans-serif;
  font-size: 1rem;
 }
 
+body{
+  font-family: var(--main-font);
+}
 .homepage {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("background-img.jpeg");
@@ -129,15 +132,15 @@ height: 21px;
 }
 .homepage-welcome {
   position: absolute;
-  height:4rem;
   top:33%;
   left: 25%;
   transform:translate ( -50%, -50%);
 }
 .homepage-welcome h1 {
   color: #ffffff;
-  font-family: var(--cursive-font);
-  font-size: 3rem;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3.7rem;
+  margin-bottom: -1rem
 }
 .homepage-welcome p {
   color: #ffffff;
@@ -174,8 +177,6 @@ height: 21px;
   height: 100vh; /*spans whole screen */
   background-color: rgb(233, 220, 224);
   color: rgb(78, 61, 64);
-  /* font-family: ; ADD LATER USE CSS VARIABLE*/
-  font-weight: 800;
   font-size: 0.9rem;
   text-align: center; /* aligns all text in child div*/
 }
@@ -183,8 +184,9 @@ height: 21px;
   grid-area: title;
   background-color:rgb(233, 220, 224);
   font-family: var(--cursive-font);
-
 }
+
+
 .about-content1{
   grid-area: content1;
   background-color: red;
@@ -235,8 +237,6 @@ height: 21px;
   grid-gap: 0.2rem; /* column row gap*/
   height: 100vh; /*spans whole screen */
   color: white;
-  /* font-family: ; ADD LATER USE CSS VARIABLE*/
-  font-weight: 800;
   font-size: 1rem;
   text-align: center; /* aligns all text in child div*/
 }
@@ -298,8 +298,6 @@ margin:1rem;
   grid-gap: 0.2rem; /* column row gap*/
   height: 100vh; /*spans whole screen */
   color: white;
-  /* font-family: ; ADD LATER USE CSS VARIABLE*/
-  font-weight: 800;
   font-size: 1rem;
   text-align: center; /* aligns all text in child div*/
 }
