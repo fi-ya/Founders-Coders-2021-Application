@@ -242,6 +242,14 @@ height: 21px;
   grid-area: radiobutton;
   background-color: palegreen;
 }
+
+.paint-radiobtn-q{
+
+}
+.paint-radiobtn-btn{
+
+}
+
 /* ------ Media Query for Pain Section ------ */
 
 @media only screen and (max-width:600px){
