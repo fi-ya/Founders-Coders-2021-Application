@@ -156,56 +156,40 @@ height: 21px;
 }
     /* ------ ABOUT STYLES ------ */
 
-#about-section {
+#about-container {
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr; /* 3 columns*/
   grid-template-rows: 0.5fr 1.5fr 1fr; /* 3 columns*/
-  grid-template-areas: 
-    " . title . " 
-    " content1 img content4"
-    " content2 content3 content5"; /*defines area by name*/
+  grid-template-areas: " title title title " /*defines area by name*/
+                      " content1 img content4"
+                      " content2 content3 content5"; 
   grid-gap: 0.2rem; /* column row gap*/
-  background-color: rgb(233, 220, 224);
-  position: relative;
   height: 100vh; /*spans whole screen */
+  background-color: rgb(233, 220, 224);
   color: rgb(78, 61, 64);
+  /* font-family: ; ADD LATER USE CSS VARIABLE*/
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center; /* aligns all text in child div*/
   
 }
 .about-title{
   grid-area: title;
-  background-color:white;
-  position: relative;
-  /* justify-items:center;
-  margin: 0em 2em 2em 2em; */
-  
+  background-color:rgb(233, 220, 224);
 }
 .about-content1{
   grid-area: content1;
   background-color: red;
-  
-/* display: inline-block;
-max-width: 60ch;
-margin-right: auto;
-margin-left: 2em;
-color: rgb(78, 61, 64); */
 }
 .about-content2{
   grid-area: content2;
   background-color: yellow;
-  
 }
 .img-container {
   grid-area: img;
   background-color: white;
- /* display:inline-block;
- width: 50vh;
- height:auto;
- margin-left: 4em; */
 }
 .me-img{  
-  position: relative;
-  max-width: 100%;
-  height: auto;
   border: 5px solid rgb(78, 61, 64);
 }
 .about-content3{
@@ -221,8 +205,16 @@ color: rgb(78, 61, 64); */
   background-color: palevioletred;
 }
 
+/* ------ Media Query for About Section ------ */
 
-    /* ------ PAINT STYLES ------ */
+@media only screen and (max-width:600px){
+  #about-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr 1.2fr 0.5fr 1.2fr 1.5fr 1.2fr;
+    grid-template-areas: " title" "content1" "content2" "img" "content3" "content4" "content5";
+  }
+}
+    /* ------ Paint STYLES ------ */
 
 .paint {
   background-color: rgb(129, 92, 97);
