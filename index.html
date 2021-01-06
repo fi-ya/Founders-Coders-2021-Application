@@ -23,12 +23,12 @@
                 </a>
                 <div class="navlinks" id="mobilemenu" >
                     <ul>
-                        <li><a class="home" href="#homes">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#paint">Paint</a> </li>
-                        <li><a href="#FAC">FAC</a></l>
-                        <li><a href="#dry-eyes">Dry Eyes</a></l>
-                        <li><a href="#contact">Contact</a></l>
+                        <li><a class="home buttonstyle-light" href="#homes">Home</a></li>
+                        <li><a class="buttonstyle-light" href="#about">About</a></li>
+                        <li><a class="buttonstyle-light" href="#paint">Paint</a> </li>
+                        <li><a class="buttonstyle-light" href="#FAC">FAC</a></l>
+                        <li><a class="buttonstyle-light" href="#dry-eyes">Dry Eyes</a></l>
+                        <li><a class="buttonstyle-light" href="#contact">Contact</a></l>
                     </ul>
                 </div>
             </nav>
@@ -63,30 +63,54 @@
             <div class="paint-carousel"><h2>image carousel</h2></div>
             <div class="paint-radiobtn">
                 <div class="paint-radiobtn-q">
-                    <h2>How many colours were used in this painting?</h2>
-                    <br>
-                    <p>Click one answer</p>
+                    <h2>What do you think?</h2>
                 </div>
                 <div class=paint-radiobtn-btn>
-                    <label for="15">
-                        <input type="radio" name="colors" id="15"> 15 colours
-                    </label>
-                    <label for="20">
-                        <input type="radio" name="colors" id="20"> 20 colours
-                    </label>
-                    <label for="25">
-                        <input type="radio" name="colors" id="25"> 25 colours
-                    </label>
-                    <label for="30">
-                        <input type="radio" name="colors" id="30"> 30 colours
-                    </label>
+                    <form> 
+                        <fieldset class="colours">
+                            <legend> How many colours were used in this painting?</legend>
+                            <div class="colours">
+                                <input type="radio" name="colours" id="15colours" value="15">
+                                <label for="15colours">15 colours</label>
+                                <input type="radio" name="colours" id="20colours" value="20">
+                                <label for="20colours"> 20 colours </label>
+                                <input type="radio" name="colours" id="25colours" value="25">
+                                <label for="25colours"> 25 colours </label>
+                                <input type="radio" name="colours" id="30colours" value="30">
+                                <label for="30colours"> 30 colours </label>
+                                <div class="answer-button">
+                                    <button type="button" onclick="checkAnswer( '25','colours');" class="buttonstyle"> I'm sure </bu>
+                                </div>
+                                
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>How many hours did it take to paint?</legend>
+                            <div class="hours">
+                                <input type="radio" name="hours" id="50hours" value="50">
+                                <label for="50hours"> over 50 hours </label>
+                                <input type="radio" name="hours" id="100hours" value="100">
+                                <label for="100hours"> over 100 hours </label>
+                                <input type="radio" name="hours" id="150hours" value="150">
+                                <label for="150hours"> over 150 hours </label>
+                                <div class="answer-button-container">
+                                    <button type="button" onclick="checkAnswer('100', 'hours');"  class="buttonstyle"> I'm sure </button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+
                 </div>
             </div>
         </section>
             <!-- WHY FAC SECTION/LINKS -->
         <section id="fac-container">
             <div class="fac-title"><h2>Founders & Coders</h2></div>
-            <div class="fac-answer"><h2>paragraphy why fac</h2></div>
+            <div class="fac-answer">
+                <h2>paragraphy why fac</h2>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
             <div class="fac-fcc-card"><h2>fcc profile link</h2></div>
             <div class="fac-cw-card"><h2>codewars profile link</h2></div>
             <div class="fac-github-card"><h2>github profile link</h2></div>
