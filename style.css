@@ -20,7 +20,7 @@ body{
   font-family: var(--main-font);
 }
 .homepage {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
     url("background-img.jpeg");
   height: 100vh;
   width: 100vw;
@@ -71,7 +71,7 @@ border-radius: 1.5rem;
   color: #000000;
 }
 .logo img {
-  width: 4rem;
+  width: 8rem;
   height: auto;
   margin: .5rem;
 }
@@ -301,7 +301,7 @@ margin:1rem;
   "fcc cw github";
   grid-gap: 0.2rem; /* column row gap*/
   height: 100vh; /*spans whole screen */
-  color: white;
+  color: #4E3D40;
   font-size: 1rem;
   text-align: center; /* aligns all text in child div*/
 }
