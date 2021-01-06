@@ -10,7 +10,9 @@ html {
 
 :root{
  --cursive-font: 'Shadows Into Light', cursive;
- --main-font: 'Montserrat', sans-serif;
+ --cursrive2:'Dancing Script', cursive;
+ --cursive3:'Dawning of a New Day', cursive;
+ --main-font: 'Roboto', sans-serif;
  font-size: 1rem;
 }
 
@@ -138,7 +140,7 @@ height: 21px;
 }
 .homepage-welcome h1 {
   color: #ffffff;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: var(--cursive3);
   font-size: 3.7rem;
   margin-bottom: -1rem
 }
@@ -183,7 +185,8 @@ height: 21px;
 .about-title{
   grid-area: title;
   background-color:rgb(233, 220, 224);
-  font-family: var(--cursive-font);
+  font-family: var(--cursive3);
+  font-size: 3rem;
 }
 
 
@@ -242,7 +245,8 @@ height: 21px;
 }
 .paint-title{
   grid-area: title;
-  font-family: var(--cursive-font);
+  font-family: var(--cursive3);
+  font-size: 3rem;
   
 }
 .paint-carousel{
@@ -303,7 +307,8 @@ margin:1rem;
 }
 .fac-title{
   grid-area: title;
-  font-family: var(--cursive-font);
+  font-family: var(--cursive3);
+  font-size: 3rem;
 
 }
 .fac-answer{
