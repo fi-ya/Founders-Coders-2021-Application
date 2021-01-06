@@ -160,18 +160,17 @@ height: 21px;
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr; /* 3 columns*/
   grid-template-rows: 0.5fr 1.5fr 1fr; /* 3 columns*/
-  grid-template-areas: " title title title " /*defines area by name*/
-                      " content1 img content4"
-                      " content2 content3 content5"; 
+  grid-template-areas: "title title title" /*defines area by name*/
+                      "content1 img content4"
+                      "content2 content3 content5"; 
   grid-gap: 0.2rem; /* column row gap*/
   height: 100vh; /*spans whole screen */
   background-color: rgb(233, 220, 224);
   color: rgb(78, 61, 64);
   /* font-family: ; ADD LATER USE CSS VARIABLE*/
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-align: center; /* aligns all text in child div*/
-  
 }
 .about-title{
   grid-area: title;
@@ -211,14 +210,13 @@ height: 21px;
   #about-container{
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1.5fr 1.2fr 0.5fr 1.2fr 1.5fr 1.2fr;
-    grid-template-areas: " title" "content1" "content2" "img" "content3" "content4" "content5";
+    grid-template-areas: "title" "content1" "content2" "img" "content3" "content4" "content5";
   }
 }
     /* ------ Paint STYLES ------ */
 
-#paint-container {
+#paint-container{
   background-color: rgb(129, 92, 97);
-  height: 100vh;
   display:grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 5fr;
@@ -241,31 +239,65 @@ height: 21px;
   background-color: rgb(212, 119, 37);
 }
 .paint-radiobtn{
-grid-area: radiobutton;
-background-color: palegreen;
+  grid-area: radiobutton;
+  background-color: palegreen;
 }
-
 /* ------ Media Query for Pain Section ------ */
 
 @media only screen and (max-width:600px){
   #paint-container{
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1.5fr 1.2fr;
-    grid-template-areas: " title" "carousel" "radiobutton" ;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-areas: "title" "carousel" "radiobutton";
   }
 }
     /* ------ FAC STYLES ------ */
 
-.FAC {
-  background-color: rgb(145, 111, 104);
-   /* #f5dce0; */ 
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
+#fac-container {
+  background-color:rgb(187, 143, 151);
+  display:grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  grid-template-rows: 1fr 3fr 5fr;
+  grid-template-areas: 
+  "title title title"
+  "fac fac fac"
+  "fcc cw github";
+  grid-gap: 0.2rem; /* column row gap*/
+  height: 100vh; /*spans whole screen */
+  color: white;
+  /* font-family: ; ADD LATER USE CSS VARIABLE*/
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center; /* aligns all text in child div*/
 }
+.fac-title{
+  grid-area: title;
+}
+.fac-answer{
+  grid-area: fac;
+  background-color: slateblue;
+}
+.fac-fcc-card{
+  grid-area:fcc;
+  background-color: steelblue;
+}
+.fac-cw-card{
+grid-area: cw;
+background-color: steelblue;
+}
+.fac-github-card{
+  grid-area: github;
+  background-color: steelblue;
+}
+/* ------ Media Query for FAC Section ------ */
 
+@media only screen and (max-width:600px){
+  #fac-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "title" "fac" "fcc" "cw" "github";
+  }
+}
   /* ------ DRY EYE STYLES ------ */
 
 .dry-eyes {
