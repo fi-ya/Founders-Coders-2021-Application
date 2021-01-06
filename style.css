@@ -216,16 +216,44 @@ height: 21px;
 }
     /* ------ Paint STYLES ------ */
 
-.paint {
+#paint-container {
   background-color: rgb(129, 92, 97);
-  position: relative;
-  width: 100vw;
   height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas: 
+  "title title"
+  "carousel radiobutton";
+  grid-gap: 0.2rem; /* column row gap*/
+  height: 100vh; /*spans whole screen */
+  color: white;
+  /* font-family: ; ADD LATER USE CSS VARIABLE*/
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center; /* aligns all text in child div*/
+}
+.paint-title{
+  grid-area: title;
+}
+.paint-carousel{
+  grid-area:carousel;
+  background-color: rgb(212, 119, 37);
+}
+.paint-radiobtn{
+grid-area: radiobutton;
+background-color: palegreen;
 }
 
+/* ------ Media Query for Pain Section ------ */
 
+@media only screen and (max-width:600px){
+  #paint-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr 1.2fr;
+    grid-template-areas: " title" "carousel" "radiobutton" ;
+  }
+}
     /* ------ FAC STYLES ------ */
 
 .FAC {
