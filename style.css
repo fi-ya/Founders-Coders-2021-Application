@@ -262,6 +262,8 @@ height: 21px;
   padding:0;
   margin:0;
   list-style: none;
+  transition: .8s transform ease-in;
+
 }
 .carousel-slide{
   padding:0;
