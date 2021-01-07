@@ -9,9 +9,7 @@ html {
 }
 
 :root{
- --cursive-font: 'Shadows Into Light', cursive;
- --cursrive2:'Dancing Script', cursive;
- --cursive3:'Dawning of a New Day', cursive;
+ --cursive-font: 'Dawning of a New Day', cursive;
  --main-font: 'Roboto', sans-serif;
  font-size: 1rem;
 }
@@ -47,25 +45,23 @@ body{
 .navlinks li {
   list-style: none; /* remove bullet points*/
 }
-.buttonstyle-light{
-margin-left: 0rem;
-text-decoration: none; /* remove underline*/
-color: white;
-padding: 10px 25px;
-display: block; /* show up as larger size*/
-transition: 0.6s ease;
-border-radius: 1.5rem;
-}
-.buttonstyle-light:hover{
-  background-color: white; /* change on hover*/
-  color: #000000;
-}
 
 .navlinks li a {
-
+  margin-left: 0rem;
+  text-decoration: none; /* remove underline*/
+  color: white;
+  padding: 10px 25px;
+  display: block; /* show up as larger size*/
+  transition: 0.6s ease;
+  border-radius: 1.5rem;
   /* border: 1px solid #ffffff; */
   /* box-shadow: 0 10px 20px rgba(255,255,255,0.19); */
 }
+.navlinks li a:hover{
+background-color: white; /* change on hover*/
+  color: #000000;
+}
+
 .navlinks li a.home {  
   background-color: white; /* home stays white*/
   color: #000000;
@@ -140,7 +136,7 @@ height: 21px;
 }
 .homepage-welcome h1 {
   color: #ffffff;
-  font-family: var(--cursive3);
+  font-family: var(--cursive-font);
   font-size: 3.7rem;
   margin-bottom: -1rem
 }
@@ -185,7 +181,7 @@ height: 21px;
 .about-title{
   grid-area: title;
   background-color:rgb(233, 220, 224);
-  font-family: var(--cursive3);
+  font-family: var(--cursive-font);
   font-size: 3rem;
 }
 
@@ -245,7 +241,7 @@ height: 21px;
 }
 .paint-title{
   grid-area: title;
-  font-family: var(--cursive3);
+  font-family: var(--cursive-font);
   font-size: 3rem;
   
 }
@@ -307,7 +303,7 @@ margin:1rem;
 }
 .fac-title{
   grid-area: title;
-  font-family: var(--cursive3);
+  font-family: var(--cursive-font);
   font-size: 3rem;
 
 }
