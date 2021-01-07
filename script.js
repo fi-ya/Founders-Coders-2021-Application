@@ -38,7 +38,6 @@ function checkAnswer(answer, radiobuttonName){
 
 //ELEMENTS 
 const carousel = document.querySelector(".carousel-track");
-console.log(carousel.children);
 
 //ALL CAROUSEL SLIDES 
 const carouselSlides = [...carousel.children];
@@ -46,5 +45,10 @@ const carouselSlides = [...carousel.children];
 //SLIDE WIDTH
 let carouselSlideWidth = carouselSlides[0].getBoundingClientRect().width;
 
-
-
+//SLIDES POSITIONED HORIZONTALLY
+function slidePosition(carouselSlides){
+    for (let index = 0; index < carouselSlides.length; index++){
+        carouselSlides[index].style.left = carouselSlideWidth + index + "px";
+    }
+}
+slidePosition(carouselSlides);
