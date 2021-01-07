@@ -55,4 +55,13 @@ function slidePosition(carouselSlides){
 }
 slidePosition(carouselSlides);
 
+//EVENT LISTENER ON NEXT BUTTON, MOVE/TranslateX SLIDES LEFT
+nextButton.addEventListener("click", function (){
+    const currentSlide = document.querySelector(".active-slide");
+    const nextSlide = currentSlide.nextElementSibling;
 
+    const translatePosition = nextSlide.style.left;
+    carousel.style.transform = `translateX(-${translatePosition})`;
+    currentSlide.classList.remove("active-slide");
+    nextSlide.classList.add("active-slide");
+});
