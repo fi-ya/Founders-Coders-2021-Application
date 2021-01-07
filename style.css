@@ -184,8 +184,6 @@ height: 21px;
   font-family: var(--cursive-font);
   font-size: 3rem;
 }
-
-
 .about-content1{
   grid-area: content1;
   background-color: red;
@@ -228,27 +226,60 @@ height: 21px;
 #paint-container{
   background-color: rgb(145, 112, 112);
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 3fr;
   grid-template-areas: 
   "title title"
   "carousel radiobutton";
-  grid-gap: 0.2rem; /* column row gap*/
+  grid-gap: 1rem; /* column row gap*/
   height: 100vh; /*spans whole screen */
   color: white;
   font-size: 1rem;
   text-align: center; /* aligns all text in child div*/
+  padding-left:2rem;
+  padding-right:2rem;
 }
 .paint-title{
   grid-area: title;
   font-family: var(--cursive-font);
   font-size: 3rem;
-  
 }
-.paint-carousel{
+/* Carousel Styles Starts Here */
+.carousel-container{
   grid-area:carousel;
-  background-color: rgb(212, 119, 37);
+  background-color: rgb(102, 116, 120);
+  width: 80%;   /* make image resposinve*/
+  height:350px;
+  margin: 0 auto; /* center image */
+  position: relative;
 }
+.slides-container{
+  width:100%;
+  height: 100%;
+  position:relative;
+}
+.slides{
+  padding:0;
+  margin:0;
+  list-style: none;
+}
+.slide{
+  padding:0;
+  margin:0;
+  top:0;
+  bottom:0;
+  position: absolute;
+  width: 100%;
+  height:100%;
+}
+.slide img{
+  width: 100%;
+  height:300px;
+  object-fit: cover; /* so images dont stretch when window wider*/
+}
+
+/* Carousel Styles Ends Here */
+
 .paint-radiobtn{
   grid-area: radiobutton;
   display: flex;
