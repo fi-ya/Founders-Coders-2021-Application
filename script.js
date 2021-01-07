@@ -1,10 +1,11 @@
 
-// Toggle Menu  - get togglemenu, listen for click event -then get mobilemenu toggle (change) CSS class to div.active
+// HOMEPAGETOGGLE MENU  
+// get togglemenu, listen for click event -then get mobilemenu toggle (change) CSS class to div.active
 document.getElementById('togglemenu').addEventListener('click', ()=> {
     document.getElementById('mobilemenu').classList.toggle('active');
 });
 
-// Welcome greeting 
+// HOMEPAGE WELCOME GREETING
 const homepageGreetings = [ 'Welcome' ,'Bienvenidos' , 'أهلا بك' , 'स्वागत हे' , '欢迎' ]
 // set counter to 0
 var counter = 0;
@@ -19,7 +20,7 @@ var counter = 0;
         // repeat every 1 second (in milliseconds)
         }, 1000); 
 
-//
+// RADIO BUTTONS FUNCTION
 function checkAnswer(answer, radiobuttonName){
 
     var radioButtons = document.getElementsByName(radiobuttonName);
@@ -33,3 +34,4 @@ function checkAnswer(answer, radiobuttonName){
     }
 }
 
+//IMAGE CAROUSEL 
