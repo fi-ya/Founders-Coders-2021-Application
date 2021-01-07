@@ -249,35 +249,54 @@ height: 21px;
   grid-area:carousel;
   background-color: rgb(102, 116, 120);
   width: 80%;   /* make image resposinve*/
-  height:350px;
+  height:270px;
   margin: 0 auto; /* center image */
   position: relative;
 }
-.slides-container{
+.carousel-track-container{
   width:100%;
-  height: 100%;
+  height: 270px;
   position:relative;
 }
-.slides{
+.carousel-track{
   padding:0;
   margin:0;
   list-style: none;
 }
-.slide{
+.carousel-slide{
   padding:0;
   margin:0;
-  top:0;
-  bottom:0;
   position: absolute;
   width: 100%;
   height:100%;
 }
-.slide img{
+.carousel-slide img{
   width: 100%;
-  height:300px;
+  height:270px;
   object-fit: cover; /* so images dont stretch when window wider*/
 }
+.carousel-button{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%); /* center buttons*/
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  width: 2rem;
+  height: 2rem;
+}
+.next{
+ left: -40px;
+}
+.prev{
+ right: -40px;
+}
+.carousel-nav{
 
+}
+.dot{
+
+}
 /* Carousel Styles Ends Here */
 
 .paint-radiobtn{
@@ -378,7 +397,7 @@ background-color: steelblue;
     /* ------ FOOTER STYLES ------ */
 
 .footer-container {
-  background-color: #4E3D40;
+  background-color: rgb(79, 64, 66);
   position: relative;
   width: 100vw;
   height: 20vh;
