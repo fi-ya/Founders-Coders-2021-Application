@@ -34,4 +34,15 @@ function checkAnswer(answer, radiobuttonName){
     }
 }
 
-//IMAGE CAROUSEL 
+//----IMAGE CAROUSEL---
+
+//ELEMENTS 
+const carousel = document.querySelector(".carousel-track");
+console.log(carousel.children);
+
+//ALL CAROUSEL SLIDES 
+const carouselSlides = [...carousel.children];
+
+
+
+
