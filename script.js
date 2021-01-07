@@ -36,8 +36,10 @@ function checkAnswer(answer, radiobuttonName){
 
 //----IMAGE CAROUSEL---
 
-//ELEMENTS 
+//GET ELEMENTS 
 const carousel = document.querySelector(".carousel-track");
+const nextButton = document.querySelector(".next-btn");
+
 
 //ALL CAROUSEL SLIDES 
 const carouselSlides = [...carousel.children];
@@ -48,7 +50,9 @@ let carouselSlideWidth = carouselSlides[0].getBoundingClientRect().width;
 //SLIDES POSITIONED HORIZONTALLY
 function slidePosition(carouselSlides){
     for (let index = 0; index < carouselSlides.length; index++){
-        carouselSlides[index].style.left = carouselSlideWidth + index + "px";
+        carouselSlides[index].style.left = carouselSlideWidth * index + "px";
     }
 }
 slidePosition(carouselSlides);
+
+

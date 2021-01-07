@@ -286,10 +286,10 @@ height: 21px;
   height: 2rem;
   color:white;
 }
-.next{
+.next-btn{
  left: -2.5rem;
 }
-.prev{
+.prev-btn{
  right: -2.5rem;
 }
 .carousel-nav{
