@@ -43,6 +43,8 @@ console.log(carousel.children);
 //ALL CAROUSEL SLIDES 
 const carouselSlides = [...carousel.children];
 
+//SLIDE WIDTH
+let carouselSlideWidth = carouselSlides[0].getBoundingClientRect().width;
 
 
 
