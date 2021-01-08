@@ -34,28 +34,28 @@ function checkAnswer(answer, radiobuttonName){
     }
 }
 
-//----IMAGE CAROUSEL---
+// ---- IMAGE CAROUSEL ----
 
-//GET CAROUSEL IMAGE ELEMENTS 
+//  GET CAROUSEL IMAGE ELEMENTS 
 const carousel = document.querySelector(".carousel-track");
 
-//ALL CAROUSEL SLIDES ARRAY
+//  ALL CAROUSEL SLIDES ARRAY
 const carouselSlides = [...carousel.children];
 
-//GET BUTTONS ELEMENTS
+//  GET BUTTONS ELEMENTS
 const nextButton = document.querySelector(".next-btn");
 const previousButton = document.querySelector(".prev-btn");
 
-//GET NAVIGATION DOT ELEMENTS
+//  GET NAVIGATION DOT ELEMENTS
 const carouselNav = document.querySelector(".carousel-nav");
 
-//ALL NAVIGATION DOT ELEMENTS ARRAY
+//  ALL NAVIGATION DOT ELEMENTS ARRAY
 const navDots = [...carouselNav.children];
 
-//SLIDE WIDTH
+//  SLIDE WIDTH
 let carouselSlideWidth = carouselSlides[0].getBoundingClientRect().width;
 
-//SLIDES POSITIONED HORIZONTALLY
+//  SLIDES POSITIONED HORIZONTALLY
 function slidePosition(carouselSlides){
     for (let index = 0; index < carouselSlides.length; index++){
         carouselSlides[index].style.left = carouselSlideWidth * index + "px";
@@ -64,7 +64,7 @@ function slidePosition(carouselSlides){
 slidePosition(carouselSlides);
 
 
-//   EVENT LISTENER ON ----NEXT BUTTON 
+//   EVENT LISTENER FOR > NEXT BUTTON > 
 nextButton.addEventListener("click", function (){
     const currentSlide = carousel.querySelector(".active");
     const nextSlide = currentSlide.nextElementSibling;
@@ -75,7 +75,7 @@ nextButton.addEventListener("click", function (){
     
 });
 
-//  EVENT LISTENER ON---- PREVIOUS BUTTON
+//  EVENT LISTENER FOR < PREVIOUS BUTTON <
 previousButton.addEventListener("click", function (){
     const currentSlide = carousel.querySelector(".active");
     const previousSlide = currentSlide.previousElementSibling;
@@ -85,12 +85,14 @@ previousButton.addEventListener("click", function (){
     moveDotWithSlide(previousSlide, carouselSlides,carouselNav, navDots);
 });
 
-//   EVENT LISTENER ON ----NAV DOTS
+//  EVENT LISTENER ON - NAV DOTS -
 carouselNav.addEventListener("click", function(e){
     if(e.target === carouselNav)return;
-    const targetDot = e.target;
-    const currentDot = carouselNav.querySelector(".active");
+    const targetDot = e.target; 
+    
     const currentSlide = carousel.querySelector(".active");
+    const currentDot = carouselNav.querySelector(".active");
+    
     let targetDotIndex = findIndex(targetDot, navDots);
     const targetSlide = carouselSlides[targetDotIndex];
     
@@ -99,28 +101,30 @@ carouselNav.addEventListener("click", function(e){
     hideCarouselButton(targetSlide, carouselSlides)
 })
 
-// MOVE DOT POSITION WHEN SLIDE POSITION MOVED WITH NEXT/PREV BUTTONS
+//  MOVE DOT POSITION WHEN SLIDE POSITION MOVED WITH NEXT/PREV BUTTONS
 function moveDotWithSlide(targetSlide, carouselSlides, carouselNav, navDots){
     let carouselSlideIndex = findIndex(targetSlide, carouselSlides);
     const currentDot = carouselNav.querySelector(".active");
     const targetDot = navDots[carouselSlideIndex];
+    
     addRemoveActiveClass(currentDot, targetDot);
 }
 
-//TRANSLATE TO TARGET SLIDE
+//  TRANSLATE TO TARGET SLIDE
 function translateToTargetSlide(carousel, currentSlide, targetSlide){
     const translatePosition = targetSlide.style.left;
     carousel.style.transform = `translateX(-${translatePosition})`;
+   
     addRemoveActiveClass(currentSlide, targetSlide);
 }
 
-//ADD/REMOVE ACTIVE-CLASS - USE ON BUTTONS AND DOTS
+//  ADD/REMOVE ACTIVE-CLASS - ON BUTTONS AND DOTS
 function addRemoveActiveClass(current, target){
     current.classList.remove("active");
     target.classList.add("active");
 }
 
-//HIDE FIRST/LAST BUTTONS 
+//  HIDE FIRST/LAST BUTTONS 
 function hideCarouselButton(targetSlide, carouselSlides){
     if (targetSlide === carouselSlides[0]){
         previousButton.classList.add("hide-btn");
@@ -134,7 +138,7 @@ function hideCarouselButton(targetSlide, carouselSlides){
     }
 }
 
-// FIND INDEX OF AN ITEM INSIDE ARRAY OF ITEMS
+//  FIND INDEX OF AN ITEM INSIDE ARRAY OF ITEMS
 function findIndex(item, items){
     for(let index=0; index < items.length; index++){
         if (item === items[index]){
