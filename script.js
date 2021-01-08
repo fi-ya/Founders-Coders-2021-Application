@@ -63,27 +63,29 @@ function slidePosition(carouselSlides){
 }
 slidePosition(carouselSlides);
 
-//EVENT LISTENER ON NEXT BUTTON 
+
+//   EVENT LISTENER ON ----NEXT BUTTON 
 nextButton.addEventListener("click", function (){
     const currentSlide = document.querySelector(".active-slide");
     const nextSlide = currentSlide.nextElementSibling;
 
     translateToTargetSlide(carousel, currentSlide, nextSlide);
     hideCarouselButton(nextSlide, carouselSlides);
-    moveDotWithSlide( nextSlide, carouselSlides, carouselNav, navDots);
+    moveDotWithSlide(nextSlide, carouselSlides, carouselNav, navDots);
     
 });
 
-//EVENT LISTENER ON PREVIOUS BUTTON
+//  EVENT LISTENER ON---- PREVIOUS BUTTON
 previousButton.addEventListener("click", function (){
     const currentSlide = document.querySelector(".active-slide");
     const previousSlide = currentSlide.previousElementSibling;
 
     translateToTargetSlide(carousel, currentSlide, previousSlide);
     hideCarouselButton(previousSlide, carouselSlides)
+    moveDotWithSlide(previousSlide, carouselSlides, carouselNav, navDots);
 });
 
-//EVENT LISTENER ON NAV DOTS
+//   EVENT LISTENER ON ----NAV DOTS
 carouselNav.addEventListener("click", function(e){
     if(e.target === carouselNav)return;
     const targetDot = e.target;
@@ -98,8 +100,8 @@ carouselNav.addEventListener("click", function(e){
 })
 
 // MOVE DOT POSITION WHEN SLIDE POSITION MOVED WITH NEXT/PREV BUTTONS
-function moveDotWithSlide( targetSlide, carouselSlides, carouselDot, navDots){
-    let carouselSlideIndex = findIndex( targetSlide, carouselSlides);
+function moveDotWithSlide(targetSlide, carouselSlides, carouselDot, navDots){
+    let carouselSlideIndex = findIndex(targetSlide, carouselSlides);
     const currentDot = document.querySelector(".active-dot");
     const targetDot = navDots[carouselSlideIndex];
     addRemoveActiveClass(currentDot, targetDot);
@@ -113,8 +115,8 @@ function translateToTargetSlide(carousel, currentSlide, targetSlide){
     addRemoveActiveClass(currentSlide, targetSlide);
 }
 
-//ADD/REMOVE ACTIVE-SLIDE CLASS
-function addRemoveActiveClass (current, target){
+//ADD/REMOVE ACTIVE-CLASS - USE ON BUTTONS AND DOTS
+function addRemoveActiveClass(current, target){
     current.classList.remove("active-slide");
     target.classList.add("active-slide");
 }
