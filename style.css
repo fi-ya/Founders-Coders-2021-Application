@@ -274,7 +274,7 @@ height: 21px;
   justify-content: space-between;
 }
 .carousel-container{
-  background-color: rgb(103, 105, 118);
+  
   width: 80%;   /* make image resposinve*/
   height:270px;
   margin: 0 auto; /* center image */

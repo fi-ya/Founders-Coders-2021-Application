@@ -156,4 +156,10 @@ function keyboardNav (e){
     }
 };
 //   EVENT LISTENER FOR KEYBOARD NAVIGATION 
-window.addEventListener("keydown", keyboardNav);
+document.addEventListener("keydown", keyboardNav);
+
+
+
+ 
+
+
