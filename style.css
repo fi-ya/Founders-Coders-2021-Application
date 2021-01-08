@@ -181,7 +181,7 @@ height: 21px;
                       "content1 img content4"
                       "content2 content3 content5"; 
   grid-gap: 0.5rem; /* column row gap*/
-  height: 100vh; /*spans whole screen */
+  height: auto; 
   background-color: rgb(233, 220, 224);
   color: rgb(78, 61, 64);
   font-size: 0.9rem;
@@ -249,7 +249,7 @@ height: 21px;
   "content content"
   "carousel radiobutton";
   grid-gap: 0.7rem; /* column row gap*/
-  height: 100vh; /*spans whole screen */
+  height: auto; 
   color: white;
   font-size: 1rem;
   text-align: justify; /* aligns all text in child div*/
@@ -363,6 +363,11 @@ height: 21px;
   justify-content: center;
   align-items: center;
 }
+.paint-radiobtn-container{
+  margin: 1rem;
+  padding: 1rem;
+
+}
 fieldset {
   margin: 1rem 0;
   position: relative;
@@ -427,7 +432,7 @@ margin-top: 0.5rem;
   "fac fac fac"
   "fcc cw github";
   grid-gap: 0.5rem; /* column row gap*/
-  height: 100vh; /*spans whole screen */
+  height: auto; 
   color: #4E3D40;
   font-size: 1rem;
   text-align: justify; /* aligns all text in child div*/
@@ -495,4 +500,9 @@ background-color: steelblue;
   height: 20vh;
   margin-left: auto;
   margin-right: auto;
+}
+.fcc-logo{
+  width: 10vh;
+  height: 2rem;
+  background-color: transparent;
 }
