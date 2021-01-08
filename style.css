@@ -191,6 +191,9 @@ height: 21px;
   background-color:rgb(233, 220, 224);
   font-family: var(--cursive-font);
   font-size: 2rem;
+  display: flex;
+    justify-content: center;
+    align-items: center;
   text-align: center;
 }
 .about-content1{
@@ -235,7 +238,7 @@ height: 21px;
 #paint-container{
   background-color: rgb(145, 112, 112);
   display:grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.5fr 3fr;
   grid-template-areas: 
   "title title"
@@ -251,7 +254,11 @@ height: 21px;
   grid-area: title;
   font-family: var(--cursive-font);
   font-size: 2rem;
+  display: flex;
+    justify-content: center;
+    align-items: center;
   text-align: center;
+
   
 }
 /* Carousel Styles Starts Here */
@@ -265,7 +272,6 @@ height: 21px;
   
 }
 .carousel-frame{
-  
   background-color:#676976;
   height: auto;
   width: 80%;
@@ -399,6 +405,9 @@ height: 21px;
   grid-area: title;
   font-family: var(--cursive-font);
   font-size: 2rem;
+  display: flex;
+    justify-content: center;
+    align-items: center;
   text-align: center;
 }
 .fac-answer{
