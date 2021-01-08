@@ -17,10 +17,13 @@
 
 <body>
     <header class="homepage">
-        <div class="homepage-container">
+        <div id="homepage-container">
             <!-- NAVIGATION BUTTONS -->
             <nav class="navbar">
-                <div class="logo"><img src="my-logo-white.svg"></div>
+                <div class="logo">
+                    <img src="my-logo-white.svg">
+                    <a href="homepage-container"></a>
+                </div>
                 <a href="#" class= "toggle-btn" id="togglemenu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -28,11 +31,11 @@
                 </a>
                 <div class="navlinks" id="mobilemenu">
                     <ul>
-                        <li><a class="home" href="#homes">HOME</a></li>
-                        <li><a href="#about">MY STORY</a></li>
-                        <li><a href="#paint">PAINT</a> </li>
-                        <li><a href="#FAC">FAC</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a class="home" href="#homepage">HOME</a></li>
+                        <li><a href="#about-container">MY STORY</a></li>
+                        <li><a href="#paint-container">PAINT</a> </li>
+                        <li><a href="#fac-container">FAC</a></li>
+                        <li><a href="#contact-container">CONTACT</a></li>
                     </ul>
                 </div>
             </nav>
@@ -41,7 +44,7 @@
             <h1 id="greeting">Welcome</h1>
             <br>
             <p>Hi! I'm Safia, an aspiring web developer and seeker of knowledge.</p>
-            <div class="homepage-button"><a href="#" class="btn">Enter</a></div>
+            <div class="homepage-button"><a href="#about-container" class="btn">Enter</a></div>
         </div> 
     </header>
 
@@ -69,18 +72,18 @@
                 <!-- carousel starts -->
             <div class="carousel-container">
                 
-                <button class="carousel-button prev-btn hide-btn"> 	
+                <button class="carousel-button prev-btn"> 	
                     &#60; </button>
                 
                 <div class="carousel-track-container">
                     <ul class="carousel-track">
-                        <li class="carousel-slide active-slide"> <img src="paint-images/painting1.jpg" alt="Paint by numbers, cottages by a canal, greeny and sky painted"> </li>
+                        <li class="carousel-slide active-slide firstSlide"> <img src="paint-images/painting1.jpg" alt="Paint by numbers, cottages by a canal, greeny and sky painted"> </li>
                         <li class="carousel-slide"> <img src="paint-images/painting2.jpg" alt="A paint by numbers of cottages by a canal, with sky painted pale blue"> </li>
                         <li class="carousel-slide"> <img src="paint-images/painting3.jpeg" alt="A paint by numbers of cottages by a canal, with trees painted green, water painted blue and roofs painted brown."> </li>
                         <li class="carousel-slide"> <img src="paint-images/painting4.jpeg" alt="A paint by numbers of cottages by a canal, with more trees painted green and roofs painted brown."> </li>
                         <li class="carousel-slide"> <img src="paint-images/painting5.jpeg" alt="A paint by numbers of cottages by a canal, with house painted tan, boat on canal painted brown and bridge over canal pained brown."> </li>
                         <li class="carousel-slide"> <img src="paint-images/painting6.jpeg" alt="A paint by numbers of cottages by a canal, with flowers on trees next to cottages painted pink, front of houses greenry painted."> </li>
-                        <li class="carousel-slide"> <img src="paint-images/painting7.jpeg" alt="A completed paint by numbers, of cottages by a canal which has a bridge and boat teathered so some steps."> </li> 
+                        <li class="carousel-slide lastSlide"> <img src="paint-images/painting7.jpeg" alt="A completed paint by numbers, of cottages by a canal which has a bridge and boat teathered so some steps."> </li> 
                     </ul> 
                 </div>
 
@@ -155,6 +158,9 @@
         </section>
         
         <!-- CONTACT ME-->
+        <section id="contact-container">
+
+        </section>
         <div class="contact"></div>        
     </main>
 
