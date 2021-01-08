@@ -269,7 +269,7 @@ height: 21px;
 .carousel-wrapper{
   grid-area:carousel;
   display:flex;
-  flex-direction: column;
+  flex-direction:column;
   align-items: center;
   justify-content: space-between;
 }
@@ -455,18 +455,17 @@ margin-top: 0.5rem;
 
   background-color: slateblue;
 }
-.fac-fcc-card{
+#fcc{
   grid-area:fcc;
   display:flex;
-  flex-direction: row;
   align-items: center;
   background-color: steelblue;
 }
-.fac-cw-card{
+#cw{
 grid-area: cw;
 background-color: steelblue;
 }
-.fac-github-card{
+#git-hub{
   grid-area: github;
   background-color: steelblue;
 }
