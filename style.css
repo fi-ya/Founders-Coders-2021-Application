@@ -320,7 +320,7 @@ height: 21px;
  margin:1rem 0.7rem;
  cursor: pointer;
 }
-.nav-dot.active{
+.active-dot{
   background: rgb(255,255,255, 1);
 }
 .hide-btn{

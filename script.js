@@ -69,7 +69,12 @@ nextButton.addEventListener("click", function (){
     const nextSlide = currentSlide.nextElementSibling;
 
     translateToTargetSlide(carousel, currentSlide, nextSlide);
-    hideCarouselButton(nextSlide, carouselSlides)
+    hideCarouselButton(nextSlide, carouselSlides);
+
+    let carouseSlideIndex = findIndex( nextSlide, carouselSlides);
+    const currentDot = document.querySelector(".active-dot");
+    const targetDot = navDots[carouseSlideIndex];
+    addRemoveActiveSlideClass(currentDot, targetDot);
 });
 
 //EVENT LISTENER ON PREVIOUS BUTTON
@@ -83,12 +88,16 @@ previousButton.addEventListener("click", function (){
 
 //EVENT LISTENER ON NAV DOTS
 carouselNav.addEventListener("click", function(e){
+    if(e.target === carouselNav)return;
     const targetDot = e.target;
+    const currentDot = document.querySelector(".active-dot");
     const currentSlide = document.querySelector(".active-slide");
     let targetDotIndex = findIndex(targetDot, navDots);
     const targetSlide = carouselSlides[targetDotIndex];
     
     translateToTargetSlide(carousel, currentSlide, targetSlide);
+    addRemoveActiveSlideClass(currentDot, targetDot);
+    hideCarouselButton(targetSlide, carouselSlides)
 })
 
 //TRANSLATE TO TARGET SLIDE
