@@ -111,14 +111,13 @@ function moveDotWithSlide(targetSlide, carouselSlides, carouselNav, navDots){
 function translateToTargetSlide(carousel, currentSlide, targetSlide){
     const translatePosition = targetSlide.style.left;
     carousel.style.transform = `translateX(-${translatePosition})`;
-
     addRemoveActiveClass(currentSlide, targetSlide);
 }
 
 //ADD/REMOVE ACTIVE-CLASS - USE ON BUTTONS AND DOTS
 function addRemoveActiveClass(current, target){
-    current.classList.remove(".active");
-    target.classList.add(".active");
+    current.classList.remove("active");
+    target.classList.add("active");
 }
 
 //HIDE FIRST/LAST BUTTONS 
