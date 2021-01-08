@@ -1,7 +1,7 @@
 
 // HOMEPAGETOGGLE MENU  
 // get togglemenu, listen for click event -then get mobilemenu toggle (change) CSS class to div.active
-document.getElementById('togglemenu').addEventListener('click', ()=> {
+document.getElementById("togglemenu").addEventListener('click', ()=> {
     document.getElementById('mobilemenu').classList.toggle('active');
 });
 
@@ -38,7 +38,10 @@ function checkAnswer(answer, radiobuttonName){
 
 //GET ELEMENTS 
 const carousel = document.querySelector(".carousel-track");
+
+//GET BUTTONS
 const nextButton = document.querySelector(".next-btn");
+const previousButton = document.querySelector(".prev-btn");
 
 
 //ALL CAROUSEL SLIDES 
@@ -64,4 +67,21 @@ nextButton.addEventListener("click", function (){
     carousel.style.transform = `translateX(-${translatePosition})`;
     currentSlide.classList.remove("active-slide");
     nextSlide.classList.add("active-slide");
+  
 });
+
+//EVENT LISTENER ON PREVIOUS BUTTON, MOVE/TranslateX SLIDES RIGHT
+previousButton.addEventListener("click", function (){
+    const currentSlide = document.querySelector(".active-slide");
+    const previousSlide = currentSlide.previousElementSibling;
+
+    const translatePosition = previousSlide.style.left;
+    carousel.style.transform = `translateX(-${translatePosition})`;
+    currentSlide.classList.remove("active-slide");
+    previousSlide.classList.add("active-slide");
+    if(previousSlide.classList.contains("firstSlide")){
+        previousButton.classList.add("hide-btn");
+    }
+});
+
+//  setInterval ( , )
