@@ -66,31 +66,31 @@ slidePosition(carouselSlides);
 
 //   EVENT LISTENER ON ----NEXT BUTTON 
 nextButton.addEventListener("click", function (){
-    const currentSlide = document.querySelector(".active");
+    const currentSlide = carousel.querySelector(".active");
     const nextSlide = currentSlide.nextElementSibling;
 
     translateToTargetSlide(carousel, currentSlide, nextSlide);
     hideCarouselButton(nextSlide, carouselSlides);
-    moveDotWithSlide(nextSlide, carouselSlides, carouselNav, navDots);
+    moveDotWithSlide(nextSlide, carouselSlides,carouselNav, navDots);
     
 });
 
 //  EVENT LISTENER ON---- PREVIOUS BUTTON
 previousButton.addEventListener("click", function (){
-    const currentSlide = document.querySelector(".active");
+    const currentSlide = carousel.querySelector(".active");
     const previousSlide = currentSlide.previousElementSibling;
 
     translateToTargetSlide(carousel, currentSlide, previousSlide);
     hideCarouselButton(previousSlide, carouselSlides)
-    moveDotWithSlide(previousSlide, carouselSlides, carouselNav, navDots);
+    moveDotWithSlide(previousSlide, carouselSlides,carouselNav, navDots);
 });
 
 //   EVENT LISTENER ON ----NAV DOTS
 carouselNav.addEventListener("click", function(e){
     if(e.target === carouselNav)return;
     const targetDot = e.target;
-    const currentDot = document.querySelector(".active");
-    const currentSlide = document.querySelector(".active");
+    const currentDot = carouselNav.querySelector(".active");
+    const currentSlide = carousel.querySelector(".active");
     let targetDotIndex = findIndex(targetDot, navDots);
     const targetSlide = carouselSlides[targetDotIndex];
     
@@ -100,9 +100,9 @@ carouselNav.addEventListener("click", function(e){
 })
 
 // MOVE DOT POSITION WHEN SLIDE POSITION MOVED WITH NEXT/PREV BUTTONS
-function moveDotWithSlide(targetSlide, carouselSlides, carouselDot, navDots){
+function moveDotWithSlide(targetSlide, carouselSlides, carouselNav, navDots){
     let carouselSlideIndex = findIndex(targetSlide, carouselSlides);
-    const currentDot = document.querySelector(".active");
+    const currentDot = carouselNav.querySelector(".active");
     const targetDot = navDots[carouselSlideIndex];
     addRemoveActiveClass(currentDot, targetDot);
 }
