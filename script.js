@@ -36,16 +36,21 @@ function checkAnswer(answer, radiobuttonName){
 
 //----IMAGE CAROUSEL---
 
-//GET ELEMENTS 
+//GET CAROUSEL IMAGE ELEMENTS 
 const carousel = document.querySelector(".carousel-track");
 
-//GET BUTTONS
+//ALL CAROUSEL SLIDES ARRAY
+const carouselSlides = [...carousel.children];
+
+//GET BUTTONS ELEMENTS
 const nextButton = document.querySelector(".next-btn");
 const previousButton = document.querySelector(".prev-btn");
 
+//GET NAVIGATION DOT ELEMENTS
+const carouselNav = document.querySelector(".carousel-nav");
 
-//ALL CAROUSEL SLIDES 
-const carouselSlides = [...carousel.children];
+//ALL NAVIGATION DOT ELEMENTS ARRAY
+const navDots = [...carouselNav.children];
 
 //SLIDE WIDTH
 let carouselSlideWidth = carouselSlides[0].getBoundingClientRect().width;
@@ -58,17 +63,16 @@ function slidePosition(carouselSlides){
 }
 slidePosition(carouselSlides);
 
-//EVENT LISTENER ON NEXT BUTTON, MOVE/TranslateX SLIDES LEFT 
+//EVENT LISTENER ON NEXT BUTTON 
 nextButton.addEventListener("click", function (){
     const currentSlide = document.querySelector(".active-slide");
     const nextSlide = currentSlide.nextElementSibling;
 
     translateToTargetSlide(carousel, currentSlide, nextSlide);
     hideCarouselButton(nextSlide, carouselSlides)
-  
 });
 
-//EVENT LISTENER ON PREVIOUS BUTTON, MOVE/TranslateX SLIDES RIGHT
+//EVENT LISTENER ON PREVIOUS BUTTON
 previousButton.addEventListener("click", function (){
     const currentSlide = document.querySelector(".active-slide");
     const previousSlide = currentSlide.previousElementSibling;
@@ -76,6 +80,16 @@ previousButton.addEventListener("click", function (){
     translateToTargetSlide(carousel, currentSlide, previousSlide);
     hideCarouselButton(previousSlide, carouselSlides)
 });
+
+//EVENT LISTENER ON NAV DOTS
+carouselNav.addEventListener("click", function(e){
+    const targetDot = e.target;
+    const currentSlide = document.querySelector(".active-slide");
+    let targetDotIndex = findIndex(targetDot, navDots);
+    const targetSlide = carouselSlides[targetDotIndex];
+    
+    translateToTargetSlide(carousel, currentSlide, targetSlide);
+})
 
 //TRANSLATE TO TARGET SLIDE
 function translateToTargetSlide(carousel, currentSlide, targetSlide){
@@ -104,3 +118,12 @@ function hideCarouselButton(targetSlide, carouselSlides){
         previousButton.classList.remove("hide-btn");
     }
 }
+
+// FIND INDEX OF AN ITEM INSIDE ARRAY OF ITEMS
+function findIndex(item, items){
+    for(let index=0; index < items.length; index++){
+        if (item === items[index]){
+            return index;
+        }
+    }
+};
