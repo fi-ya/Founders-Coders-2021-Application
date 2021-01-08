@@ -75,10 +75,16 @@ previousButton.addEventListener("click", function (){
     translateToTargetSlide(carousel, currentSlide, previousSlide);
 });
 
-//MOVE TO TARGET SLIDE
+//TRANSLATE TO TARGET SLIDE
 function translateToTargetSlide(carousel, currentSlide, targetSlide){
     const translatePosition = targetSlide.style.left;
     carousel.style.transform = `translateX(-${translatePosition})`;
-    currentSlide.classList.remove("active-slide");
-    targetSlide.classList.add("active-slide");
+    
+    addRemoveActiveSlide (currentSlide, targetSlide);
+}
+
+//ADD/REMOVE ACTIVE-SLIDE
+function addRemoveActiveSlide (current, target){
+    current.classList.remove("active-slide");
+    target.classList.add("active-slide");
 }
