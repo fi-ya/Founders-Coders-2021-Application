@@ -58,12 +58,13 @@ function slidePosition(carouselSlides){
 }
 slidePosition(carouselSlides);
 
-//EVENT LISTENER ON NEXT BUTTON, MOVE/TranslateX SLIDES LEFT
+//EVENT LISTENER ON NEXT BUTTON, MOVE/TranslateX SLIDES LEFT 
 nextButton.addEventListener("click", function (){
     const currentSlide = document.querySelector(".active-slide");
     const nextSlide = currentSlide.nextElementSibling;
 
     translateToTargetSlide(carousel, currentSlide, nextSlide);
+    hideCarouselButton(nextSlide, carouselSlides)
   
 });
 
@@ -73,18 +74,33 @@ previousButton.addEventListener("click", function (){
     const previousSlide = currentSlide.previousElementSibling;
 
     translateToTargetSlide(carousel, currentSlide, previousSlide);
+    hideCarouselButton(previousSlide, carouselSlides)
 });
 
 //TRANSLATE TO TARGET SLIDE
 function translateToTargetSlide(carousel, currentSlide, targetSlide){
     const translatePosition = targetSlide.style.left;
     carousel.style.transform = `translateX(-${translatePosition})`;
-    
-    addRemoveActiveSlide (currentSlide, targetSlide);
+
+    addRemoveActiveSlideClass(currentSlide, targetSlide);
 }
 
-//ADD/REMOVE ACTIVE-SLIDE
-function addRemoveActiveSlide (current, target){
+//ADD/REMOVE ACTIVE-SLIDE CLASS
+function addRemoveActiveSlideClass (current, target){
     current.classList.remove("active-slide");
     target.classList.add("active-slide");
+}
+
+//HIDE FIRST/LAST BUTTONS 
+function hideCarouselButton(targetSlide, carouselSlides){
+    if (targetSlide === carouselSlides[0]){
+        previousButton.classList.add("hide-btn");
+        nextButton.classList.remove("hide-btn");
+    } else if(targetSlide === carouselSlides[carouselSlides.length-1]){
+        nextButton.classList.add("hide-btn");
+        previousButton.classList.remove("hide-btn");
+    } else { 
+        nextButton.classList.remove("hide-btn");
+        previousButton.classList.remove("hide-btn");
+    }
 }
