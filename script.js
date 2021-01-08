@@ -63,20 +63,18 @@ function slidePosition(carouselSlides){
 }
 slidePosition(carouselSlides);
 
-
 //   EVENT LISTENER FOR > NEXT BUTTON > 
-nextButton.addEventListener("click", function (){
+nextButton.addEventListener("click", function nextClick(){
     const currentSlide = carousel.querySelector(".active");
     const nextSlide = currentSlide.nextElementSibling;
 
     translateToTargetSlide(carousel, currentSlide, nextSlide);
     hideCarouselButton(nextSlide, carouselSlides);
     moveDotWithSlide(nextSlide, carouselSlides,carouselNav, navDots);
-    
 });
 
 //  EVENT LISTENER FOR < PREVIOUS BUTTON <
-previousButton.addEventListener("click", function (){
+previousButton.addEventListener("click", function prevClick(){
     const currentSlide = carousel.querySelector(".active");
     const previousSlide = currentSlide.previousElementSibling;
 
@@ -86,7 +84,7 @@ previousButton.addEventListener("click", function (){
 });
 
 //  EVENT LISTENER ON - NAV DOTS -
-carouselNav.addEventListener("click", function(e){
+carouselNav.addEventListener("click", function dotClick(e){
     if(e.target === carouselNav)return;
     const targetDot = e.target; 
     
@@ -146,3 +144,13 @@ function findIndex(item, items){
         }
     }
 };
+
+//  KEYBOARD NAVIGATION
+window.addEventListener("keydown", function(e){
+    if(e.keyCode === 39){
+        
+    }
+    else if(e.keyCode === 37){
+        prevClick();
+    }
+})
