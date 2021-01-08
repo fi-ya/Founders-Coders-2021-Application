@@ -1,23 +1,18 @@
 
 // HOMEPAGETOGGLE MENU  
-// get togglemenu, listen for click event -then get mobilemenu toggle (change) CSS class to div.active
 document.getElementById("togglemenu").addEventListener('click', ()=> {
     document.getElementById('mobilemenu').classList.toggle('active');
 });
 
 // HOMEPAGE WELCOME GREETING
 const homepageGreetings = [ 'Welcome' ,'Bienvenidos' , 'أهلا بك' , 'स्वागत हे' , '欢迎' ]
-// set counter to 0
 var counter = 0;
-    // function get greeting by ID, assign it to homepageGreetings location counter
     setInterval(function() {
         document.getElementById('greeting').innerHTML = homepageGreetings[counter];
         counter++;
-        //if counter is more than greetings array, set counter to 0
         if (counter >= homepageGreetings.length){
             counter = 0;
         }
-        // repeat every 1 second (in milliseconds)
         }, 1000); 
 
 // RADIO BUTTONS FUNCTION
@@ -63,28 +58,32 @@ function slidePosition(carouselSlides){
 }
 slidePosition(carouselSlides);
 
-//   EVENT LISTENER FOR > NEXT BUTTON > 
-nextButton.addEventListener("click", function nextClick(){
+//  NEXT BUTTON NAVIGATION 
+function nextImage(){
     const currentSlide = carousel.querySelector(".active");
     const nextSlide = currentSlide.nextElementSibling;
 
     translateToTargetSlide(carousel, currentSlide, nextSlide);
     hideCarouselButton(nextSlide, carouselSlides);
     moveDotWithSlide(nextSlide, carouselSlides,carouselNav, navDots);
-});
+};
+//   EVENT LISTENER FOR NEXT BUTTON 
+nextButton.addEventListener("click", nextImage);
 
-//  EVENT LISTENER FOR < PREVIOUS BUTTON <
-previousButton.addEventListener("click", function prevClick(){
+//  PREVIOUS BUTTON NAVIGATION 
+function prevImage(){
     const currentSlide = carousel.querySelector(".active");
     const previousSlide = currentSlide.previousElementSibling;
 
     translateToTargetSlide(carousel, currentSlide, previousSlide);
     hideCarouselButton(previousSlide, carouselSlides)
     moveDotWithSlide(previousSlide, carouselSlides,carouselNav, navDots);
-});
+};
+//   EVENT LISTENER FOR PREVIOUS BUTTON 
+previousButton.addEventListener("click", prevImage);
 
-//  EVENT LISTENER ON - NAV DOTS -
-carouselNav.addEventListener("click", function dotClick(e){
+//  NAVIGATION DOTS 
+function dotNav(e){
     if(e.target === carouselNav)return;
     const targetDot = e.target; 
     
@@ -97,7 +96,9 @@ carouselNav.addEventListener("click", function dotClick(e){
     translateToTargetSlide(carousel, currentSlide, targetSlide);
     addRemoveActiveClass(currentDot, targetDot);
     hideCarouselButton(targetSlide, carouselSlides)
-})
+};
+//   EVENT LISTENER FOR NAVIGATION DOTS 
+carouselNav.addEventListener("click", dotNav);
 
 //  MOVE DOT POSITION WHEN SLIDE POSITION MOVED WITH NEXT/PREV BUTTONS
 function moveDotWithSlide(targetSlide, carouselSlides, carouselNav, navDots){
@@ -146,11 +147,13 @@ function findIndex(item, items){
 };
 
 //  KEYBOARD NAVIGATION
-window.addEventListener("keydown", function(e){
+function keyboardNav (e){
     if(e.keyCode === 39){
-        
+        nextImage();
     }
     else if(e.keyCode === 37){
-        prevClick();
+        prevImage();
     }
-})
+};
+//   EVENT LISTENER FOR KEYBOARD NAVIGATION 
+window.addEventListener("keydown", keyboardNav);
