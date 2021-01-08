@@ -71,10 +71,10 @@ nextButton.addEventListener("click", function (){
     translateToTargetSlide(carousel, currentSlide, nextSlide);
     hideCarouselButton(nextSlide, carouselSlides);
 
-    let carouseSlideIndex = findIndex( nextSlide, carouselSlides);
+    let carouselSlideIndex = findIndex( nextSlide, carouselSlides);
     const currentDot = document.querySelector(".active-dot");
-    const targetDot = navDots[carouseSlideIndex];
-    addRemoveActiveSlideClass(currentDot, targetDot);
+    const targetDot = navDots[carouselSlideIndex];
+    addRemoveActiveClass(currentDot, targetDot);
 });
 
 //EVENT LISTENER ON PREVIOUS BUTTON
@@ -96,7 +96,7 @@ carouselNav.addEventListener("click", function(e){
     const targetSlide = carouselSlides[targetDotIndex];
     
     translateToTargetSlide(carousel, currentSlide, targetSlide);
-    addRemoveActiveSlideClass(currentDot, targetDot);
+    addRemoveActiveClass(currentDot, targetDot);
     hideCarouselButton(targetSlide, carouselSlides)
 })
 
@@ -105,11 +105,11 @@ function translateToTargetSlide(carousel, currentSlide, targetSlide){
     const translatePosition = targetSlide.style.left;
     carousel.style.transform = `translateX(-${translatePosition})`;
 
-    addRemoveActiveSlideClass(currentSlide, targetSlide);
+    addRemoveActiveClass(currentSlide, targetSlide);
 }
 
 //ADD/REMOVE ACTIVE-SLIDE CLASS
-function addRemoveActiveSlideClass (current, target){
+function addRemoveActiveClass (current, target){
     current.classList.remove("active-slide");
     target.classList.add("active-slide");
 }
