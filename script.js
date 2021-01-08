@@ -70,11 +70,8 @@ nextButton.addEventListener("click", function (){
 
     translateToTargetSlide(carousel, currentSlide, nextSlide);
     hideCarouselButton(nextSlide, carouselSlides);
-
-    let carouselSlideIndex = findIndex( nextSlide, carouselSlides);
-    const currentDot = document.querySelector(".active-dot");
-    const targetDot = navDots[carouselSlideIndex];
-    addRemoveActiveClass(currentDot, targetDot);
+    moveDotWithSlide( nextSlide, carouselSlides, carouselNav, navDots);
+    
 });
 
 //EVENT LISTENER ON PREVIOUS BUTTON
@@ -99,6 +96,14 @@ carouselNav.addEventListener("click", function(e){
     addRemoveActiveClass(currentDot, targetDot);
     hideCarouselButton(targetSlide, carouselSlides)
 })
+
+// MOVE DOT POSITION WHEN SLIDE POSITION MOVED WITH NEXT/PREV BUTTONS
+function moveDotWithSlide( targetSlide, carouselSlides, carouselDot, navDots){
+    let carouselSlideIndex = findIndex( targetSlide, carouselSlides);
+    const currentDot = document.querySelector(".active-dot");
+    const targetDot = navDots[carouselSlideIndex];
+    addRemoveActiveClass(currentDot, targetDot);
+}
 
 //TRANSLATE TO TARGET SLIDE
 function translateToTargetSlide(carousel, currentSlide, targetSlide){
