@@ -63,10 +63,7 @@ nextButton.addEventListener("click", function (){
     const currentSlide = document.querySelector(".active-slide");
     const nextSlide = currentSlide.nextElementSibling;
 
-    const translatePosition = nextSlide.style.left;
-    carousel.style.transform = `translateX(-${translatePosition})`;
-    currentSlide.classList.remove("active-slide");
-    nextSlide.classList.add("active-slide");
+    translateToTargetSlide(carousel, currentSlide, nextSlide);
   
 });
 
@@ -75,13 +72,13 @@ previousButton.addEventListener("click", function (){
     const currentSlide = document.querySelector(".active-slide");
     const previousSlide = currentSlide.previousElementSibling;
 
-    const translatePosition = previousSlide.style.left;
-    carousel.style.transform = `translateX(-${translatePosition})`;
-    currentSlide.classList.remove("active-slide");
-    previousSlide.classList.add("active-slide");
-    if(previousSlide.classList.contains("firstSlide")){
-        previousButton.classList.add("hide-btn");
-    }
+    translateToTargetSlide(carousel, currentSlide, previousSlide);
 });
 
-//  setInterval ( , )
+//MOVE TO TARGET SLIDE
+function translateToTargetSlide(carousel, currentSlide, targetSlide){
+    const translatePosition = targetSlide.style.left;
+    carousel.style.transform = `translateX(-${translatePosition})`;
+    currentSlide.classList.remove("active-slide");
+    targetSlide.classList.add("active-slide");
+}
