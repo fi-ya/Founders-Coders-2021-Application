@@ -184,13 +184,14 @@ height: 21px;
   background-color: rgb(233, 220, 224);
   color: rgb(78, 61, 64);
   font-size: 0.9rem;
-  text-align: center; /* aligns all text in child div*/
+  text-align: justify; /* aligns all text in child div*/
 }
 .about-title{
   grid-area: title;
   background-color:rgb(233, 220, 224);
   font-family: var(--cursive-font);
-  font-size: 3rem;
+  font-size: 2rem;
+  text-align: center;
 }
 .about-content1{
   grid-area: content1;
@@ -235,7 +236,7 @@ height: 21px;
   background-color: rgb(145, 112, 112);
   display:grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 0.5fr 3fr;
   grid-template-areas: 
   "title title"
   "carousel radiobutton";
@@ -243,23 +244,40 @@ height: 21px;
   height: 100vh; /*spans whole screen */
   color: white;
   font-size: 1rem;
-  text-align: center; /* aligns all text in child div*/
-  padding-left:2rem;
-  padding-right:2rem;
+  text-align: justify; /* aligns all text in child div*/
+
 }
 .paint-title{
   grid-area: title;
   font-family: var(--cursive-font);
-  font-size: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  
 }
 /* Carousel Styles Starts Here */
-.carousel-container{
+
+.carousel-wrapper{
   grid-area:carousel;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.carousel-frame{
+  
+  background-color:#676976;
+  height: auto;
+  width: 80%;
+  z-index:1;
+}
+.carousel-container{
   background-color: rgb(102, 116, 120);
   width: 80%;   /* make image resposinve*/
   height:270px;
   margin: 0 auto; /* center image */
   position: relative;
+  z-index: 2;
 }
 .carousel-track-container{
   width:100%;
@@ -272,7 +290,6 @@ height: 21px;
   margin:0;
   list-style: none;
   transition: .8s transform ease-in;
-
 }
 .carousel-slide{
   padding:0;
@@ -328,32 +345,30 @@ height: 21px;
 }
 /* Carousel Styles Ends Here */
 
-.paint-radiobtn{
+.paint-radiobtn-wrapper{
   grid-area: radiobutton;
-  display: flex;
+  display:flex;
   flex-direction: column;
-  align-self: center;
-  
-  
-
+  justify-content: center;
+  align-items: center;
 }
-
-.paint-radiobtn-q{
-
-  margin-bottom: 1rem;
+.paint-by-numbers{
+  padding: 2rem 2rem;
 }
-/* .paint-radiobtn-btn{
-
-} */
-
+.colours{
+  margin: 0;
+}
+.hours{
+  margin: 0;
+}
 .answer-button{
-margin:1rem;
+
 }
 
 .answer-button button{
-  border-radius: 1rem;
-
+  
 }
+
 /* ------ Media Query for Pain Section ------ */
 
 @media only screen and (max-width:600px){
@@ -378,13 +393,13 @@ margin:1rem;
   height: 100vh; /*spans whole screen */
   color: #4E3D40;
   font-size: 1rem;
-  text-align: center; /* aligns all text in child div*/
+  text-align: justify; /* aligns all text in child div*/
 }
 .fac-title{
   grid-area: title;
   font-family: var(--cursive-font);
-  font-size: 3rem;
-
+  font-size: 2rem;
+  text-align: center;
 }
 .fac-answer{
   grid-area: fac;
