@@ -463,7 +463,7 @@ margin-top: 0.5rem;
 }
 .container { /*contains div for all card */
   position:relative;
-  /* width: 0; */
+  /* width: 70rem; */
   display:flex;
   justify-content: center;
   align-items:center;
@@ -471,7 +471,14 @@ margin-top: 0.5rem;
   padding: 2rem;
 }
 .card{ /*contains div for logo and content */
-
+position:relative;
+max-width: 18rem;
+background: #fff;
+height: 13rem;
+margin: 1.9rem 0.6rem;
+padding: 1.25rem 0.9rem;
+display:flex;
+flex-direction: column;
 }
 
 .imgLogo{ /* is the div that contains the logo*/
