@@ -472,7 +472,7 @@ margin-top: 0.5rem;
 }
 .card{ /*contains div for logo and content */
 position:relative;
-max-width: 18rem;
+/* max-width: 18rem; */
 background: #fff;
 height: 13rem;
 margin: 1.9rem 0.6rem;
@@ -482,7 +482,13 @@ flex-direction: column;
 }
 
 .imgLogo{ /* is the div that contains the logo*/
-
+position: relative;
+width: 16rem;
+height: 16rem;
+top: 3.75rem;
+left: 1.25rem;
+box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+z-index: 1;
 }
 
 .imgLogo img { /* logo */
