@@ -508,13 +508,19 @@ border-radius: 0.5rem;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
+.container.card:hover.content{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -2.5rem;
+  transition-delay: 0.3s;
+}
 .content h2 { /* content heading*/
 
 }
 .content p { /* content pargraph*/
 
 }
-.container .card .content a { /* content a link*/
+.container.card.content a { /* content a link*/
   position:relative;
   display: inline-block;
   padding: 1.6rem 1.25rem;
@@ -524,15 +530,15 @@ border-radius: 0.5rem;
   text-decoration: none;
   margin-top:1.25rem;
 }
-.container .card:nth-child(1) .content a{
+.container.card:nth-child(1).content a{
   background: #0a0a23;
   color: #fff;
 }
-.container .card:nth-child(2) .content a{
+.container.card:nth-child(2).content a{
   background: #b1361e;
   color: #fff;
 }
-.container .card:nth-child(3) .content a{
+.container.card:nth-child(3).content a{
   background: #171516;;
   color: #fff;
 }
