@@ -189,6 +189,7 @@ body {
   color: rgb(78, 61, 64);
   font-size: 0.9rem;
   text-align: justify; /* aligns all text in child div*/
+  margin: 0 auto;
 }
 .about-title {
   grid-area: title;
@@ -199,35 +200,40 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-
   margin-top: 2rem;
 }
 .about-content1 {
   grid-area: content1;
-  background-color: red;
+  margin: 0 auto;
+  padding: 5%;
 }
 .about-content2 {
   grid-area: content2;
-  background-color: yellow;
+  margin: 0 auto;
+  padding: 5%;
 }
 .img-container {
   grid-area: img;
-  
+  margin: 0 auto;
+  padding: 5%;
 }
 .me-img {
   
 }
 .about-content3 {
   grid-area: content3;
-  background-color: blue;
+  margin: 0 auto;
+  padding: 5%;
 }
 .about-content4 {
   grid-area: content4;
-  background-color: green;
+  margin: 0 auto;
+  padding: 5%;
 }
 .about-content5 {
   grid-area: content5;
-  background-color: palevioletred;
+  margin: 0 auto;
+  padding: 5%;
 }
 
 /* ------ Media Query for About Section ------ */
@@ -264,9 +270,19 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
-
+.paint-by-numbers {
+  grid-area: content;
+  padding: 2rem 1.7rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 5%;
+  text-align: justify;
+}
 /* Carousel Styles Starts Here */
 .carousel-wrapper {
   grid-area: carousel;
@@ -367,20 +383,12 @@ button .size img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-right: 2rem;
-  margin-left: 2rem;
-}
-.paint-by-numbers {
-  grid-area: content;
-  padding: 2rem 1.7rem 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  padding: 5%;
 }
 .paint-radiobtn-container {
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0 auto;
+  padding: 5%;
 }
 fieldset {
   margin: 1rem 0;
@@ -438,12 +446,12 @@ label {
 #fac-container {
   background-color: rgb(187, 143, 151);
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr ;
+  grid-template-columns: 1fr ;
   grid-template-rows: 0.3fr 0.5fr 0.5fr;
   grid-template-areas:
-    "title title title"
-    "fac fac fac"
-    "card card card";
+    "title "
+    "fac "
+    "card";
   grid-gap: 0.5rem; /* column row gap*/
   height: auto;
   color: #4e3d40;
@@ -455,11 +463,11 @@ label {
   font-family: var(--cursive-font);
   font-size: 2rem;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 0 auto;
+  padding: 5%;
 }
 .fac-answer {
   grid-area: fac;
@@ -467,6 +475,8 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  padding: 5%;
 }
 .fac-answer h2 {
   display: flex;
@@ -477,15 +487,17 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .container {
   grid-area: card;
   position: relative;
   display: flex;
-  flex-direction:column;
+  flex-direction:row;
   justify-content: center;
   align-items: center;
   padding: 1.25rem;
+  margin: 0 auto;
 }
 .container .card {
   /*contains div for logo and content */
@@ -530,6 +542,7 @@ label {
   background-image: url("/logos/GitHub-Mark-120px-plus.png");
   background-size: cover;
   background-position: center;
+  border: tomato;
 }
 .container .card .imgLogo img {
   width: 180px;
@@ -583,7 +596,7 @@ label {
 @media only screen and (max-width: 600px) {
   #fac-container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr;
     grid-template-areas: "title" "fac" "card";
   }
 }
@@ -605,8 +618,6 @@ label {
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 .contact .thank-you {
   color: rgb(233, 220, 224);
@@ -646,6 +657,5 @@ label {
 }
 .fcc-logo img {
   width: 4rem;
-
   background-color: transparent;
 }
