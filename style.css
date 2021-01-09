@@ -452,7 +452,6 @@ margin-top: 0.5rem;
   display:flex;
   flex-direction: column;
   align-items: center;
-
   background-color: slateblue;
 }
 #fcc{
@@ -461,6 +460,29 @@ margin-top: 0.5rem;
   align-items: center;
   background-color: steelblue;
 }
+.card{ /*contains div for logo and content */
+
+}
+
+.imgLogo{ /* is the div that contains the logo*/
+
+}
+
+.imgLogo img { /* logo */
+
+}
+.content{ /* contains h2 p */
+}
+.content h2 { /* content heading*/
+
+}
+.content p { /* content pargraph*/
+
+}
+.content a { /* content a link*/
+
+}
+
 #cw{
 grid-area: cw;
 background-color: steelblue;
