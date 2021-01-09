@@ -479,6 +479,8 @@ margin: 1.9rem 0.6rem;
 padding: 1.25rem 0.9rem;
 display:flex;
 flex-direction: column;
+box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+transition: 0.3s ease-in-out;
 }
 
 .imgLogo{ /* is the div that contains the logo*/
