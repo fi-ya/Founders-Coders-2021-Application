@@ -470,6 +470,9 @@ margin-top: 0.5rem;
   flex-wrap:wrap;
   padding: 2rem;
 }
+.card:hover{
+  height: 26rem;
+}
 .card{ /*contains div for logo and content */
 position:relative;
 /* max-width: 18rem; */
@@ -496,6 +499,14 @@ max-width: 100%;
 border-radius: 0.5rem;
 }
 .content{ /* contains h2 p */
+  position:relative;
+  margin-top: 8.75rem;
+  padding: 0.6rem 0.9rem;
+  text-align: center;
+  color:rgb(79, 64, 66);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
 }
 .content h2 { /* content heading*/
 
