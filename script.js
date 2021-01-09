@@ -168,13 +168,18 @@ function findIndex(item, items){
 function keyboardNav (e){
     if(e.keyCode === 39){
         nextImage();
+        clearTimer();
     }
     else if(e.keyCode === 37){
         prevImage();
+        clearTimer();
     }
 };
 //   EVENT LISTENER FOR KEYBOARD NAVIGATION 
 document.addEventListener("keydown", keyboardNav);
+    
+
+
 
 
 
