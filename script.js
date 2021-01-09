@@ -58,6 +58,14 @@ function slidePosition(carouselSlides){
 }
 slidePosition(carouselSlides);
 
+//  AUTOMATIC NAVIGATION
+let myTimer = setInterval(nextImage, 3000);
+
+function clearTimer(){
+    clearInterval(myTimer);
+    myTimer = setInterval(nextImage,3000);
+}
+
 //  NEXT BUTTON NAVIGATION 
 function nextImage(){
     const currentSlide = carousel.querySelector(".active");
@@ -76,7 +84,10 @@ function nextImage(){
     }
 };
 //   EVENT LISTENER FOR NEXT BUTTON 
-nextButton.addEventListener("click", nextImage);
+nextButton.addEventListener("click", function(){
+    nextImage(); 
+    clearTimer();
+});
 
 //  PREVIOUS BUTTON NAVIGATION 
 function prevImage(){
@@ -96,7 +107,10 @@ function prevImage(){
     }
 };
 //   EVENT LISTENER FOR PREVIOUS BUTTON 
-previousButton.addEventListener("click", prevImage);
+previousButton.addEventListener("click", function(){
+    prevImage(); 
+    clearTimer();
+});
 
 //  NAVIGATION DOTS 
 function clickDot(e){
@@ -111,10 +125,12 @@ function clickDot(e){
     
     translateToTargetSlide(carousel, currentSlide, targetSlide);
     addRemoveActiveClass(currentDot, targetDot);
-    hideCarouselButton(targetSlide, carouselSlides)
 };
 //   EVENT LISTENER FOR NAVIGATION DOTS 
-carouselNav.addEventListener("click", clickDot);
+carouselNav.addEventListener("click", function(e){
+    clickDot(e); 
+    clearTimer();
+});
 
 //  MOVE DOT POSITION WHEN SLIDE POSITION MOVED WITH NEXT/PREV BUTTONS
 function moveDotWithSlide(targetSlide, carouselSlides, carouselNav, navDots){
@@ -160,8 +176,7 @@ function keyboardNav (e){
 //   EVENT LISTENER FOR KEYBOARD NAVIGATION 
 document.addEventListener("keydown", keyboardNav);
 
-//  AUTOMATIC NAVIGATION
-setInterval(nextImage, 3000);
+
 
 
 
