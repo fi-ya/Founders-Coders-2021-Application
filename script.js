@@ -40,6 +40,8 @@ const carouselSlides = [...carousel.children];
 //  GET BUTTONS ELEMENTS
 const nextButton = document.querySelector(".next-btn");
 const previousButton = document.querySelector(".prev-btn");
+const playButton = document.querySelector(".play-btn");
+const pauseButton = document.querySelector(".pause-btn");
 
 //  GET NAVIGATION DOT ELEMENTS
 const carouselNav = document.querySelector(".carousel-nav");
@@ -61,10 +63,20 @@ slidePosition(carouselSlides);
 //  AUTOMATIC NAVIGATION
 let myTimer = setInterval(nextImage, 3000);
 
-function clearTimer(){
+function restartTimer(){
     clearInterval(myTimer);
     myTimer = setInterval(nextImage,3000);
 }
+
+//   EVENT LISTENER FOR PLAY BUTTON 
+playButton.addEventListener("click", function(){
+    setInterval(nextImage, 3000);
+});
+
+//   EVENT LISTENER FOR PAUSE BUTTON 
+pauseButton.addEventListener("click", function() { 
+    clearInterval(myTimer);
+});
 
 //  NEXT BUTTON NAVIGATION 
 function nextImage(){
@@ -73,20 +85,23 @@ function nextImage(){
 
     if (currentSlide === carouselSlides[carouselSlides.length-1])
     {
+        // carousel.classList.add("hide-transition");
         translateToTargetSlide(carousel, currentSlide, carouselSlides[0]);
         const currentDot = carouselNav.querySelector(".active");
         const firstDot = navDots[0];
         addRemoveActiveClass(currentDot, firstDot);
     } 
     else { 
+        carousel.classList.remove("hide-transition");
         translateToTargetSlide(carousel, currentSlide, nextSlide);
         moveDotWithSlide(nextSlide, carouselSlides,carouselNav, navDots);
     }
 };
+
 //   EVENT LISTENER FOR NEXT BUTTON 
-nextButton.addEventListener("click", function(){
+nextButton.addEventListener("click", function() {
     nextImage(); 
-    clearTimer();
+    restartTimer();
 });
 
 //  PREVIOUS BUTTON NAVIGATION 
@@ -96,20 +111,22 @@ function prevImage(){
 
     if (currentSlide === carouselSlides[0])
     {   
+        // carousel.classList.add("hide-transition");
         translateToTargetSlide(carousel, currentSlide, carouselSlides[carouselSlides.length-1]);
         const currentDot = carouselNav.querySelector(".active");
         const lastDot = navDots[navDots.length-1];
         addRemoveActiveClass(currentDot, lastDot);
     } 
     else { 
+        carousel.classList.remove("hide-transition");
         translateToTargetSlide(carousel, currentSlide, previousSlide);
         moveDotWithSlide(previousSlide, carouselSlides,carouselNav, navDots);
     }
 };
 //   EVENT LISTENER FOR PREVIOUS BUTTON 
-previousButton.addEventListener("click", function(){
+previousButton.addEventListener("click", function() {
     prevImage(); 
-    clearTimer();
+    restartTimer();
 });
 
 //  NAVIGATION DOTS 
@@ -123,13 +140,14 @@ function clickDot(e){
     let targetDotIndex = findIndex(targetDot, navDots);
     const targetSlide = carouselSlides[targetDotIndex];
     
+    carousel.classList.add("hide-transition");
     translateToTargetSlide(carousel, currentSlide, targetSlide);
     addRemoveActiveClass(currentDot, targetDot);
 };
 //   EVENT LISTENER FOR NAVIGATION DOTS 
 carouselNav.addEventListener("click", function(e){
     clickDot(e); 
-    clearTimer();
+    restartTimer();
 });
 
 //  MOVE DOT POSITION WHEN SLIDE POSITION MOVED WITH NEXT/PREV BUTTONS
@@ -168,11 +186,11 @@ function findIndex(item, items){
 function keyboardNav (e){
     if(e.keyCode === 39){
         nextImage();
-        clearTimer();
+        restartTimer();
     }
     else if(e.keyCode === 37){
         prevImage();
-        clearTimer();
+        restartTimer();
     }
 };
 //   EVENT LISTENER FOR KEYBOARD NAVIGATION 

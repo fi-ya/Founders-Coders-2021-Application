@@ -269,14 +269,14 @@ height: 21px;
 .carousel-wrapper{
   grid-area:carousel;
   display:flex;
-  flex-direction:column;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem;
+  padding-left:2rem;
 }
 .carousel-container{
-  
   width: 80%;   /* make image resposinve*/
-  height:270px;
+  height:auto;
   margin: 0 auto; /* center image */
   position: relative;
 }
@@ -292,6 +292,9 @@ height: 21px;
   list-style: none;
   transition: .8s transform ease-in;
 }
+.hide-transition{
+  transition:none;
+}
 .carousel-slide{
   padding:0;
   margin:0;
@@ -306,20 +309,32 @@ height: 21px;
 }
 .carousel-button{
   position: absolute;
-  top:50%;
   transform: translateY(-50%); /* center buttons*/
   background:transparent;
   border:none;
   cursor:pointer;
-  width: 2rem;
-  height: 2rem;
   color:white;
 }
-.next-btn{
- right: -2.5rem;
-}
 .prev-btn{
- left: -2.5rem;
+  top:50%;
+  left: -3.5rem;
+ }
+.next-btn{
+  top:50%;
+  right: -3.5rem;
+}
+.play-btn{
+  top: 90%;
+  right:50%
+}
+.pause-btn{
+  top: 90%;
+  right:35%;
+  
+}
+
+button .size img{
+  width:100%;
 }
 .carousel-nav{
   width:100%;
