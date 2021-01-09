@@ -174,6 +174,9 @@ function keyboardNav (e){
 //   EVENT LISTENER FOR KEYBOARD NAVIGATION 
 document.addEventListener("keydown", keyboardNav);
 
+//  AUTOMATIC NAVIGATION
+setInterval(nextImage, 3000);
+
 
 
  
