@@ -442,8 +442,8 @@ margin-top: 0.5rem;
   font-family: var(--cursive-font);
   font-size: 2rem;
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-top: 2rem;
 }
@@ -457,8 +457,18 @@ margin-top: 0.5rem;
 #fcc{
   grid-area:fcc;
   display:flex;
+  justify-content: center;
   align-items: center;
-  background-color: steelblue;
+  background:white;
+}
+.container { /*contains div for all card */
+  position:relative;
+  /* width: 0; */
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
+  padding: 2rem;
 }
 .card{ /*contains div for logo and content */
 
@@ -484,12 +494,18 @@ margin-top: 0.5rem;
 }
 
 #cw{
-grid-area: cw;
-background-color: steelblue;
+  grid-area: cw;
+  display:flex; 
+  justify-content: center;
+  align-items: center;
+  background:white;
 }
 #git-hub{
   grid-area: github;
-  background-color: steelblue;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background:white;
 }
 /* ------ Media Query for FAC Section ------ */
 
