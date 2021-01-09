@@ -441,7 +441,7 @@ margin-top: 0.5rem;
   background-color:rgb(187, 143, 151);
   display:grid;
   grid-template-columns: 1.5fr 1.5fr 1.5fr;
-  grid-template-rows: 1fr 3fr 3fr;
+  grid-template-rows: 0.3fr 0.5fr 0.5fr;
   grid-template-areas: 
   "title title title"
   "fac fac fac"
@@ -457,6 +457,7 @@ margin-top: 0.5rem;
   font-family: var(--cursive-font);
   font-size: 2rem;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -466,8 +467,16 @@ margin-top: 0.5rem;
   grid-area: fac;
   display:flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
+.fac-answer h2{
+
+}
+.fac-answer p{
+
+}
+
 #fcc{
   grid-area:fcc;
   display:flex;
@@ -488,7 +497,6 @@ margin-top: 0.5rem;
 }
 .container { /*contains div for all card */
   position:relative;
-  /* width: 70rem; */
   display:flex;
   justify-content: center;
   align-items:center;
@@ -497,72 +505,72 @@ margin-top: 0.5rem;
 }
 .container .card{ /*contains div for logo and content */
   position:relative;
-  /* max-width: 18rem; */
+  width:80%;
+  height:auto;
   background: #fff;
-  /* height: 13rem; */
-  margin: 1.9rem 0.6rem;
-  padding: 1.25rem 0.9rem;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-  transition: 0.3s ease-in-out;
+  height:auto;
+  margin: 1.25rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 0.9rem 1.5rem rgba(0,0,0,0.5);
+  transition: 0.5s;
+}
+.container:hover .card{
+  filter: blur(2.25rem);
+  transform: scale(0.9);
+  opacity: 0.5;
 }
 .container .card:hover{
-  height: 26rem;
+  filter:blur(0);
+  transform: scale(1.1);
+  opacity: 1;
 }
 .container .card .imgLogo{ /* is the div that contains the logo*/
   position: relative;
-  /* width: 16rem; */
-  /* height: 16rem; */
-  top: 3.75rem;
-  left: 1.25rem;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  background-color: tomato;
-  z-index: 1;
+  width: 100%; 
+  height: 100%;
+  /* box-shadow: 0 5px 20px rgba(0,0,0,0.2); */
 }
 .container .card .imgLogo img { 
-  max-width: 100%;
-  border-radius: 0.5rem; 
+  width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
 }   
-.container .card .content{ /* contains h2 p */
-  position: relative;;
-  margin-top: 8rem;
-  padding: 0.6rem 0.9rem;
+.container .card .content { /* contains h2 p */
+  position: relative;
+  bottom: 0.6rem;
+  padding-bottom: 1.25rem;
   text-align: center;
   color:rgb(79, 64, 66);
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
 }
-.container .card:hover .content{
-  visibility: visible;
-  opacity: 1;
-  margin-top: -2.5rem;
-  transition-delay: 0.3s;
-}
-.content h2 { /* content heading*/
+.container .card .content h2 { /* content heading*/
 font-size: 2rem;
-padding: 30px 0;
+padding: 1.9rem 0;
+color:rgb(79, 64, 66);
 }
-.content p { /* content pargraph*/
-text-align:justify;
+.container .card .content p { /* content pargraph*/
+text-align:center;
 font-size: 1rem;
+color:rgb(79, 64, 66);
 }
 .container .card .content a { /* content a link*/
   position:relative;
   display: inline-block;
-  padding: 1.6rem 1.25rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 2.5rem;
   text-decoration: none;
-  margin-top:1.25rem;
+  margin-top: 1.25rem;
 }
-.container .card:nth-child(1) .content a{
+#fcc .container .card .content a{
   background: #0a0a23;
   color: #fff;
 }
-.container .card:nth-child(2) .content a{
+#cw .container .card .content a{
   background: #b1361e;
   color: #fff;
 }
-.container .card:nth-child(3) .content a{
+#git-hub .container .card .content a{
   background: #171516;;
   color: #fff;
 }

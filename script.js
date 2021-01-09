@@ -70,7 +70,9 @@ function restartTimer(){
 
 //   EVENT LISTENER FOR PLAY BUTTON 
 playButton.addEventListener("click", function(){
-    setInterval(nextImage, 3000);
+   if (myTimer){  //--- NEED TO FIXXXX
+    setInterval(nextImage, 3000);    
+   }
 });
 
 //   EVENT LISTENER FOR PAUSE BUTTON 
