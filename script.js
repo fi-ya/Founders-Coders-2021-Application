@@ -63,8 +63,8 @@ function nextImage(){
     const currentSlide = carousel.querySelector(".active");
     const nextSlide = currentSlide.nextElementSibling;
 
-    translateToTargetSlide(carousel, currentSlide, nextSlide);
     hideCarouselButton(nextSlide, carouselSlides);
+    translateToTargetSlide(carousel, currentSlide, nextSlide);
     moveDotWithSlide(nextSlide, carouselSlides,carouselNav, navDots);
 };
 //   EVENT LISTENER FOR NEXT BUTTON 
@@ -75,15 +75,23 @@ function prevImage(){
     const currentSlide = carousel.querySelector(".active");
     const previousSlide = currentSlide.previousElementSibling;
 
-    translateToTargetSlide(carousel, currentSlide, previousSlide);
-    hideCarouselButton(previousSlide, carouselSlides)
-    moveDotWithSlide(previousSlide, carouselSlides,carouselNav, navDots);
+    if (currentSlide === carouselSlides[0])
+    {
+        translateToTargetSlide(carousel, currentSlide, carouselSlides[carouselSlides.length-1]);
+        const currentDot = carouselNav.querySelector(".active");
+        const lastDot = navDots[navDots.length-1];
+        addRemoveActiveClass(currentDot, lastDot);
+    } 
+    else { 
+        translateToTargetSlide(carousel, currentSlide, previousSlide);
+        moveDotWithSlide(previousSlide, carouselSlides,carouselNav, navDots);
+    }
 };
 //   EVENT LISTENER FOR PREVIOUS BUTTON 
 previousButton.addEventListener("click", prevImage);
 
 //  NAVIGATION DOTS 
-function dotNav(e){
+function clickDot(e){
     if(e.target === carouselNav)return;
     const targetDot = e.target; 
     
@@ -98,7 +106,7 @@ function dotNav(e){
     hideCarouselButton(targetSlide, carouselSlides)
 };
 //   EVENT LISTENER FOR NAVIGATION DOTS 
-carouselNav.addEventListener("click", dotNav);
+carouselNav.addEventListener("click", clickDot);
 
 //  MOVE DOT POSITION WHEN SLIDE POSITION MOVED WITH NEXT/PREV BUTTONS
 function moveDotWithSlide(targetSlide, carouselSlides, carouselNav, navDots){
@@ -124,18 +132,18 @@ function addRemoveActiveClass(current, target){
 }
 
 //  HIDE FIRST/LAST BUTTONS 
-function hideCarouselButton(targetSlide, carouselSlides){
-    if (targetSlide === carouselSlides[0]){
-        previousButton.classList.add("hide-btn");
-        nextButton.classList.remove("hide-btn");
-    } else if(targetSlide === carouselSlides[carouselSlides.length-1]){
-        nextButton.classList.add("hide-btn");
-        previousButton.classList.remove("hide-btn");
-    } else { 
-        nextButton.classList.remove("hide-btn");
-        previousButton.classList.remove("hide-btn");
-    }
-}
+// function hideCarouselButton(targetSlide, carouselSlides){
+//     if (targetSlide === carouselSlides[0]){
+//         carouselSlides[carouselSlides.length-1].classList.add('active');
+//         targetSlide.classList.remove("active");
+//     } else if(targetSlide === carouselSlides[carouselSlides.length-1]){
+//         carouselSlides[0].classList.add("active");
+//         targetSlide.classList.remove("active");}
+//     // } else { 
+//     //     nextButton.classList.remove("hide-btn");
+//     //     previousButton.classList.remove("hide-btn");
+//     // }
+// }
 
 //  FIND INDEX OF AN ITEM INSIDE ARRAY OF ITEMS
 function findIndex(item, items){
