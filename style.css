@@ -482,19 +482,18 @@ flex-direction: column;
 box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 transition: 0.3s ease-in-out;
 }
-
 .imgLogo{ /* is the div that contains the logo*/
 position: relative;
-width: 16rem;
+/* width: 16rem; */
 height: 16rem;
 top: 3.75rem;
 left: 1.25rem;
 box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 z-index: 1;
 }
-
 .imgLogo img { /* logo */
-
+max-width: 100%;
+border-radius: 0.5rem;
 }
 .content{ /* contains h2 p */
 }
@@ -505,6 +504,14 @@ z-index: 1;
 
 }
 .content a { /* content a link*/
+  position:relative;
+  display: inline-block;
+  padding: 1.6rem 1.25rem;
+  background: #000;
+  color: #fff;
+  border-radius: 2.5rem;
+  text-decoration: none;
+  margin-top:1.25rem;
 
 }
 
