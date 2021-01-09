@@ -63,9 +63,17 @@ function nextImage(){
     const currentSlide = carousel.querySelector(".active");
     const nextSlide = currentSlide.nextElementSibling;
 
-    hideCarouselButton(nextSlide, carouselSlides);
-    translateToTargetSlide(carousel, currentSlide, nextSlide);
-    moveDotWithSlide(nextSlide, carouselSlides,carouselNav, navDots);
+    if (currentSlide === carouselSlides[carouselSlides.length-1])
+    {
+        translateToTargetSlide(carousel, currentSlide, carouselSlides[0]);
+        const currentDot = carouselNav.querySelector(".active");
+        const firstDot = navDots[0];
+        addRemoveActiveClass(currentDot, firstDot);
+    } 
+    else { 
+        translateToTargetSlide(carousel, currentSlide, nextSlide);
+        moveDotWithSlide(nextSlide, carouselSlides,carouselNav, navDots);
+    }
 };
 //   EVENT LISTENER FOR NEXT BUTTON 
 nextButton.addEventListener("click", nextImage);
