@@ -452,14 +452,24 @@ margin-top: 0.5rem;
   display:flex;
   flex-direction: column;
   align-items: center;
-  background-color: slateblue;
 }
 #fcc{
   grid-area:fcc;
   display:flex;
   justify-content: center;
   align-items: center;
-  background:white;
+}
+#cw{
+  grid-area: cw;
+  display:flex; 
+  justify-content: center;
+  align-items: center;
+}
+#git-hub{
+  grid-area: github;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 .container { /*contains div for all card */
   position:relative;
@@ -468,39 +478,38 @@ margin-top: 0.5rem;
   justify-content: center;
   align-items:center;
   flex-wrap:wrap;
-  padding: 2rem;
+  padding: 1.25rem;
 }
-.card:hover{
+.container .card{ /*contains div for logo and content */
+  position:relative;
+  /* max-width: 18rem; */
+  background: #fff;
+  /* height: 13rem; */
+  margin: 1.9rem 0.6rem;
+  padding: 1.25rem 0.9rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: 0.3s ease-in-out;
+}
+.container .card:hover{
   height: 26rem;
 }
-.card{ /*contains div for logo and content */
-position:relative;
-/* max-width: 18rem; */
-background: #fff;
-height: 13rem;
-margin: 1.9rem 0.6rem;
-padding: 1.25rem 0.9rem;
-display:flex;
-flex-direction: column;
-box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-transition: 0.3s ease-in-out;
+.container .card .imgLogo{ /* is the div that contains the logo*/
+  position: relative;
+  /* width: 16rem; */
+  /* height: 16rem; */
+  top: 3.75rem;
+  left: 1.25rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  background-color: tomato;
+  z-index: 1;
 }
-.imgLogo{ /* is the div that contains the logo*/
-position: relative;
-/* width: 16rem; */
-height: 16rem;
-top: 3.75rem;
-left: 1.25rem;
-box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-z-index: 1;
-}
-.imgLogo img { /* logo */
-max-width: 100%;
-border-radius: 0.5rem;
-}
-.content{ /* contains h2 p */
-  position:relative;
-  margin-top: 8.75rem;
+.container .card .imgLogo img { 
+  max-width: 100%;
+  border-radius: 0.5rem; 
+}   
+.container .card .content{ /* contains h2 p */
+  position: relative;;
+  margin-top: 8rem;
   padding: 0.6rem 0.9rem;
   text-align: center;
   color:rgb(79, 64, 66);
@@ -508,54 +517,41 @@ border-radius: 0.5rem;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
-.container.card:hover.content{
+.container .card:hover .content{
   visibility: visible;
   opacity: 1;
   margin-top: -2.5rem;
   transition-delay: 0.3s;
 }
 .content h2 { /* content heading*/
-
+font-size: 2rem;
+padding: 30px 0;
 }
 .content p { /* content pargraph*/
-
+text-align:justify;
+font-size: 1rem;
 }
-.container.card.content a { /* content a link*/
+.container .card .content a { /* content a link*/
   position:relative;
   display: inline-block;
   padding: 1.6rem 1.25rem;
-  background: #000;
-  color: #fff;
   border-radius: 2.5rem;
   text-decoration: none;
   margin-top:1.25rem;
 }
-.container.card:nth-child(1).content a{
+.container .card:nth-child(1) .content a{
   background: #0a0a23;
   color: #fff;
 }
-.container.card:nth-child(2).content a{
+.container .card:nth-child(2) .content a{
   background: #b1361e;
   color: #fff;
 }
-.container.card:nth-child(3).content a{
+.container .card:nth-child(3) .content a{
   background: #171516;;
   color: #fff;
 }
-#cw{
-  grid-area: cw;
-  display:flex; 
-  justify-content: center;
-  align-items: center;
-  background:white;
-}
-#git-hub{
-  grid-area: github;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  background:white;
-}
+
 /* ------ Media Query for FAC Section ------ */
 
 @media only screen and (max-width:600px){

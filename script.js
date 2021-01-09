@@ -95,7 +95,7 @@ function prevImage(){
     const previousSlide = currentSlide.previousElementSibling;
 
     if (currentSlide === carouselSlides[0])
-    {
+    {   
         translateToTargetSlide(carousel, currentSlide, carouselSlides[carouselSlides.length-1]);
         const currentDot = carouselNav.querySelector(".active");
         const lastDot = navDots[navDots.length-1];
