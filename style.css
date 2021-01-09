@@ -500,8 +500,8 @@ background-color: steelblue;
   margin-left: auto;
   margin-right: auto;
 }
-.fcc-logo{
-  width: 10vh;
-  height: 2rem;
+.fcc-logo img{  
+  width: 4rem;
+  
   background-color: transparent;
 }

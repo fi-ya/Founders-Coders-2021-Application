@@ -139,20 +139,6 @@ function addRemoveActiveClass(current, target){
     target.classList.add("active");
 }
 
-//  HIDE FIRST/LAST BUTTONS 
-// function hideCarouselButton(targetSlide, carouselSlides){
-//     if (targetSlide === carouselSlides[0]){
-//         carouselSlides[carouselSlides.length-1].classList.add('active');
-//         targetSlide.classList.remove("active");
-//     } else if(targetSlide === carouselSlides[carouselSlides.length-1]){
-//         carouselSlides[0].classList.add("active");
-//         targetSlide.classList.remove("active");}
-//     // } else { 
-//     //     nextButton.classList.remove("hide-btn");
-//     //     previousButton.classList.remove("hide-btn");
-//     // }
-// }
-
 //  FIND INDEX OF AN ITEM INSIDE ARRAY OF ITEMS
 function findIndex(item, items){
     for(let index=0; index < items.length; index++){
