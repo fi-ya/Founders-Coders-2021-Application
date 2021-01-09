@@ -330,9 +330,7 @@ height: 21px;
 .pause-btn{
   top: 90%;
   right:35%;
-  
 }
-
 button .size img{
   width:100%;
 }
@@ -471,12 +469,15 @@ margin-top: 0.5rem;
   align-items: center;
 }
 .fac-answer h2{
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .fac-answer p{
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 #fcc{
   grid-area:fcc;
   display:flex;
@@ -496,7 +497,7 @@ margin-top: 0.5rem;
   align-items: center;
 }
 .container { /*contains div for all card */
-  position:relative;
+  position: relative;;
   display:flex;
   justify-content: center;
   align-items:center;
@@ -504,7 +505,7 @@ margin-top: 0.5rem;
   padding: 1.25rem;
 }
 .container .card{ /*contains div for logo and content */
-  position:relative;
+  position: relative;;
   width:80%;
   height:auto;
   background: #fff;
@@ -516,9 +517,10 @@ margin-top: 0.5rem;
   transition: 0.5s;
 }
 .container:hover .card{
-  filter: blur(2.25rem);
+  filter: blur(1.25rem);
   transform: scale(0.9);
   opacity: 0.5;
+ 
 }
 .container .card:hover{
   filter:blur(0);
@@ -529,11 +531,9 @@ margin-top: 0.5rem;
   position: relative;
   width: 100%; 
   height: 100%;
-  /* box-shadow: 0 5px 20px rgba(0,0,0,0.2); */
 }
 .container .card .imgLogo img { 
   width: 100%;
-  display: block;
   height: auto;
   margin: 0 auto;
 }   
@@ -546,7 +546,7 @@ margin-top: 0.5rem;
 }
 .container .card .content h2 { /* content heading*/
 font-size: 2rem;
-padding: 1.9rem 0;
+padding: 1.9rem 1.5rem;
 color:rgb(79, 64, 66);
 }
 .container .card .content p { /* content pargraph*/
