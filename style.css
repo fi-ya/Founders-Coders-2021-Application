@@ -515,7 +515,7 @@ label {
   height: auto;
   background: #F2F2F2;
   height: auto;
-  margin: 1.25rem;
+  /* margin: 1.25rem; */
   border-radius: 1.25rem;
   overflow: hidden;
   box-shadow: 0 0.9rem 1.5rem rgba(0, 0, 0, 0.5);
