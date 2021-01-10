@@ -483,17 +483,25 @@ label {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 0;
+  padding: 2rem;
 }
-.fac-answer h2 {
+.fac-answer h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: left;
 }
-.fac-answer p {
+.fac-answer p{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 1rem;
+  text-align: left;
+  font-size: 1rem;
+}
+.fac-answer h2{
+  font-family: var(--cursive-font);
+
   
 }
 .container {
@@ -575,8 +583,13 @@ label {
   text-align: center;
   font-size: 1rem;
   color: rgb(79, 64, 66);
+  padding: 0 0.5rem;
+  margin: 0 1rem;
 }
-.container .card .content a {
+.container .card .content p .tips{
+  text-align: justify;
+}
+.link{
   position: relative;
   display: inline-block;
   padding: 0.6rem 1.25rem;
@@ -625,9 +638,10 @@ label {
   align-items: center;
   margin: 0 auto;
   padding: 1rem 1rem 1rem 2rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("bck-img.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("bck-img.jpg");
   background-size: cover;
   background-position: center;
+  
 }
 .contact {
   position: relative;
@@ -639,7 +653,7 @@ label {
   color:#F2F2F2;
  
 }
-.contact .thank-you h2{
+.contact .thank-you h1{
   font-family: var(--cursive-font);
   font-size: 2rem;
   text-align: center;
@@ -668,31 +682,30 @@ label {
   background-color: rgb(79, 64, 66); /* #733E39; */
   position: relative;
   margin: 0 auto;
-  padding: 5%;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
   text-align: center;
-}
-.fcc-logo img {
-  
 }
 .footer-links li a{
   text-decoration: none;
   color: white;
   padding: 0.5rem;
 }
+.footer-links li a:hover {
+  background-color: white; /* change on hover*/
+  color: #000000;
+  border-radius: 0.5rem;
+}
 .footer-links li{
   display: inline-block;
   list-style:none;
-  
 }
 .footer-logo{
-  
-  margin: 1rem 2rem;
+  margin: 1rem 1.5rem;
 }
 .footer-logo img{
   width: 2rem;
   border-radius: 50%;
   
-
 }
 .copyright p{
   padding-top: 1rem;
