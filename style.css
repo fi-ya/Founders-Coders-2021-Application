@@ -532,21 +532,21 @@ label {
   opacity: 1;
 }
 .fcc-logo{
-  background-image: url("/logos/fcc_primary_small.png");
+  background-image: url("logos/fcc_primary_small.png");
   width: 100%;
   height: 235px;
   background-size: cover;
   background-position: center;
 }
 .cw-logo{
-  background-image: url("/logos/codewars-logo.png");
+  background-image: url("logos/codewars-logo.png");
   width: 100%;
   height: 235px;
   background-size: cover;
   background-position: center;
 }
 .github-logo{
-  background-image: url("/logos/GitHub-Mark-120px-plus.png");
+  background-image: url("logos/GitHub-Mark-120px-plus.png");
   width: 100%;
   height: 235px;
   background-size: cover;
