@@ -76,7 +76,7 @@ body {
 
 /* ------ MEDIA QUERY FOR TOGGLEMENU ------ */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .toggle-btn {
     display: flex; 
   }
@@ -230,7 +230,7 @@ body {
 
 /* ------ MEDIA QUERY FOR ABOUT SECTION ------ */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   #about-container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1.5fr 1.2fr 0.5fr 1.2fr 1.5fr 1.2fr;
@@ -438,7 +438,7 @@ label {
 
 /* ------ MEDIA QUERY FOR PAINT SECTION ------ */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   #paint-container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1fr 1fr;
@@ -602,7 +602,7 @@ p .tips{
 
 /* ------ MEDIA QUERY FOR FAC SECTION ------ */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   #fac-container {
     grid-template-columns: 1fr;
     grid-template-rows:  1fr 1fr 1fr;
