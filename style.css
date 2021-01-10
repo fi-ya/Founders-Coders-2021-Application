@@ -666,6 +666,10 @@ label {
   text-align: center;
   margin: 1rem auto;
 }
+.contact .thank-you a:hover{
+  background-color: white; /* change on hover*/
+  color: #000000;
+}
 .contact .thank-you a{
   position: relative;
   padding: 0.6rem 1.25rem;
