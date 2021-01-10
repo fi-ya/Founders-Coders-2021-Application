@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c7510f12ef.js" crossorigin="anonymous"></script>
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> -->
     <title>Hi FAC &hearts;</title>
@@ -20,10 +21,7 @@
         <div id="homepage-container">
             <!-- NAVIGATION BUTTONS -->
             <nav class="navbar">
-                <div class="logo">
-                    <img src="my-logo-white.svg">
-                    <a href="homepage-container"></a>
-                </div>
+                <div class="logo"><a href="homepage-container"><img src="my-logo-white.svg"></a></div> 
                 <a href="#" class= "toggle-btn" id="togglemenu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -39,12 +37,12 @@
                     </ul>
                 </div>
             </nav>
-        </div>
-        <div class="homepage-welcome">
-            <h1 id="greeting">Welcome</h1>
-            <br>
-            <p>Hi! I'm Safia, an aspiring web developer and seeker of knowledge.</p>
-            <div class="homepage-button"><a href="#about-container" class="btn">Enter</a></div>
+            <div class="homepage-welcome">
+                <h1 id="greeting">Welcome</h1>
+                <br>
+                <p>Hi! I'm Safia, an aspiring web developer and seeker of knowledge.</p>
+                <div class="homepage-button"><a href="#about-container" class="btn">Enter</a></div>
+            </div>
         </div> 
     </header>
 
@@ -56,7 +54,7 @@
             </div>
             <div class="about-content2"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <div class="img-container"><img src="#" alt="Safia drinking coffee" class="me-img"></div> 
+            <div class="img-container"><img src="me-circle.png" alt="Safia drinking coffee" class="me-img"></div> 
             <div class="about-content3"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <div class="about-content4"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -87,10 +85,10 @@
                         </ul> 
                     </div>
     
-                    <button class="carousel-button prev-btn"><img src="/paint-images/prev.png"></button>
-                    <button class="carousel-button next-btn"><img src="/paint-images/next.png"></button>
-                    <button class="carousel-button play-btn size"><img src="/paint-images/play.png"></button>
-                    <button class="carousel-button pause-btn size"><img src="/paint-images/pause.png"></button>
+                    <button class="carousel-button prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-button next-btn"><i class="fas fa-chevron-right"></i></button>
+                    <button class="carousel-button play-btn size"><i class="fas fa-play"></i></button>
+                    <button class="carousel-button pause-btn size"><i class="fas fa-pause"></i></button>
                 
                     <div class="carousel-nav">
                         <div class="nav-dot active"></div>
@@ -109,40 +107,44 @@
                 <div class=paint-radiobtn-container>
                     <form> 
                         <fieldset class="colours">
-                            <legend> How many colours were used in this painting?</legend>
-                            <div class="colours">
+                            <span> How many colours were used in this painting?</span>
+                            <div class="answers">
                                 <input type="radio" name="colours" id="15colours" value="15">
                                 <label for="15colours">15 colours</label>
+                                <br>
                                 <input type="radio" name="colours" id="20colours" value="20">
                                 <label for="20colours"> 20 colours </label>
+                                <br>
                                 <input type="radio" name="colours" id="25colours" value="25">
                                 <label for="25colours"> 25 colours </label>
+                                <br>
                                 <input type="radio" name="colours" id="30colours" value="30">
                                 <label for="30colours"> 30 colours </label>
-                                
-                                <div class="answer-button">
-                                    <button type="button" onclick="checkAnswer('25','colours');" class="buttonstyle"> I'm sure </bu>
-                                </div>
+                                <br>
+                            </div>
+                            <div class="answer-button">
+                                <button type="button" onclick="checkAnswer('25','colours');" class="buttonstyle"> I'm sure </bu>
                             </div>
                         </fieldset>
+                        
                         <fieldset>
-                            <legend>How many hours did it take to paint?</legend>
-                            <div class="hours">
-                                <input type="radio" name="hours" id="50hours" value="50">
-                                <label for="50hours"> over 50 hours </label>
-                                <input type="radio" name="hours" id="100hours" value="100">
-                                <label for="100hours"> over 100 hours </label>
-                                <input type="radio" name="hours" id="150hours" value="150">
-                                <label for="150hours"> over 150 hours </label>
-                                
-                                <div class="answer-button">
-                                    <button type="button" onclick="checkAnswer('100', 'hours');"  class="buttonstyle"> I'm sure </button>
-                                </div>
-
+                            <span>How many hours did it take to paint?</span>
+                            <div class="answers">
+                                    <input type="radio" name="hours" id="50hours" value="50">
+                                    <label for="50hours"> over 50 hours </label>
+                                    <br>
+                                    <input type="radio" name="hours" id="100hours" value="100">
+                                    <label for="100hours"> over 100 hours </label>
+                                    <br>
+                                    <input type="radio" name="hours" id="150hours" value="150">
+                                    <label for="150hours"> over 150 hours </label>
+                            </div>
+                            <div class="answer-button">
+                                <button type="button" onclick="checkAnswer('100', 'hours');"  class="buttonstyle"> I'm sure </button>
                             </div>
                         </fieldset>
                     </form>
-                </div>
+                </di>
             </div>
         </section>
 

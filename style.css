@@ -52,7 +52,7 @@ body {
   margin-left: 0rem;
   text-decoration: none; /* remove underline*/
   color: white;
-  padding: 10px 25px;
+  padding: 1rem 2rem;
   display: block; /* show up as larger size*/
   transition: 0.6s ease;
   border-radius: 1.5rem;
@@ -133,6 +133,7 @@ body {
 }
 .homepage-welcome {
   position: absolute;
+  max-width: 700px;
   top: 33%;
   left: 25%;
   transform: translate (-50%, -50%);
@@ -166,19 +167,12 @@ body {
   color: #000000;
 }
 
-/* .logo{
-  position:absolute;
-  top: 2rem;
-  left:0;
-  right:0;
-  margin:auto;
-} */
 /* ------ ABOUT STYLES ------ */
 
 #about-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* 3 columns*/
-  grid-template-rows: 1fr 1.5fr 1fr; /* 3 columns*/
+  grid-template-rows: 0.5fr 1.5fr 1fr; /* 3 columns*/
   grid-template-areas:
     "title title title" /*defines area by name*/
     "content1 img content4"
@@ -200,7 +194,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 2rem;
+  margin: 0 auto;
 }
 .about-content1 {
   grid-area: content1;
@@ -218,7 +212,8 @@ body {
   padding: 5%;
 }
 .me-img {
-  
+  width:100%;
+  height:auto;
 }
 .about-content3 {
   grid-area: content3;
@@ -251,16 +246,18 @@ body {
   background-color: rgb(145, 112, 112);
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
   grid-template-areas:
     "title title"
     "content content"
-    "carousel radiobutton";
-  grid-gap: 0.7rem; /* column row gap*/
+    "carousel carousel"
+    "radiobutton radiobutton";
+  grid-gap: 0.5rem; /* column row gap*/
   height: auto;
   color: white;
   font-size: 1rem;
   text-align: justify; /* aligns all text in child div*/
+  margin: 0 auto;
 }
 .paint-title {
   grid-area: title;
@@ -270,17 +267,17 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 4rem;
+  margin: 0 auto;
+  
 }
 .paint-by-numbers {
   grid-area: content;
-  padding: 2rem 1.7rem 2rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 5%;
+  padding: 0 2rem;
   text-align: justify;
 }
 /* Carousel Styles Starts Here */
@@ -289,8 +286,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
-  padding-left: 2rem;
+  padding: 0 2rem;
+  
 }
 .carousel-container {
   width: 80%; /* make image resposinve*/
@@ -359,6 +356,8 @@ button .size img {
   top: 270px;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  /* padding: 0.5rem 0; */
 }
 .nav-dot {
   background: rgba(255, 255, 255, 0.3);
@@ -384,47 +383,55 @@ button .size img {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 5%;
+  padding: 2rem 2rem;
 }
 .paint-radiobtn-container {
   margin: 0 auto;
   padding: 5%;
 }
 fieldset {
-  margin: 1rem 0;
-  position: relative;
-  border: none;
+  margin: 2rem 1rem 3rem 1rem;
+  background-color: rgb(103, 105, 118);
+  text-align:left;
+  border:none;
+  border-radius:0.5rem;
+  box-shadow: 0 0.9rem 1.5rem rgba(0, 0, 0, 0.5);
+}
+fieldset span{
+  display: inline-block;
+  padding: 2rem 1rem 1rem 2rem;
+  font-family: var(--cursive-font);
+  font-size:1.5rem;
 }
 fieldset > legend {
   margin-left: 1rem;
   background-color: rgb(103, 105, 118);
-  padding: 0.4rem;
+  padding: 1rem 2rem;
   margin: 1rem 0.5rem 0.8rem 0.5rem;
   border-radius: 0.3rem;
-  text-align: left;
+  /* text-align: center; */
 }
 label {
   padding: 1rem 0.5rem;
 }
-.colours {
-  margin: 0;
+.answers{
+  padding-left: 3.5rem;
 }
-.hours {
-  margin: 0;
-}
+
 .answer-button {
   display: flex;
   justify-content: center;
-  margin-left: 3rem;
-  margin-top: 0.5rem;
+  margin:2rem auto;
 }
 .buttonstyle {
-  padding: 0.5rem 1rem;
+  width: 6rem;
+  padding: 0.6rem 0.5rem;
   border: 1px solid #ffffff;
   transition: 0.6s ease;
   border-radius: 0.2rem;
   background-color: transparent;
   color: white;
+  
 }
 .buttonstyle:hover {
   background-color: white;
@@ -432,7 +439,7 @@ label {
   color: rgb(79, 64, 66);
 }
 
-/* ------ Media Query for Pain Section ------ */
+/* ------ Media Query for Paint Section ------ */
 
 @media only screen and (max-width: 600px) {
   #paint-container {
@@ -446,7 +453,7 @@ label {
 #fac-container {
   background-color: rgb(187, 143, 151);
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   grid-template-rows: 0.3fr 0.5fr 0.5fr;
   grid-template-areas:
     "title "
@@ -467,7 +474,7 @@ label {
   align-items: center;
   text-align: center;
   margin-top: 0 auto;
-  padding: 5%;
+  
 }
 .fac-answer {
   grid-area: fac;
@@ -476,7 +483,7 @@ label {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 5%;
+  padding: 0;
 }
 .fac-answer h2 {
   display: flex;
@@ -493,10 +500,9 @@ label {
   grid-area: card;
   position: relative;
   display: flex;
-  flex-direction:row;
   justify-content: center;
   align-items: center;
-  padding: 1.25rem;
+  padding: 0 1.25rem 1.25rem 1.25rem;
   margin: 0 auto;
 }
 .container .card {
@@ -522,24 +528,24 @@ label {
   transform: scale(1.1);
   opacity: 1;
 }
-.container .card .imgLogo {
-  /* is the div that contains the logo*/
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
 .fcc-logo{
   background-image: url("/logos/fcc_primary_small.png");
+  width: 100%;
+  height: 235px;
   background-size: cover;
   background-position: center;
 }
 .cw-logo{
   background-image: url("/logos/codewars-logo.png");
+  width: 100%;
+  height: 235px;
   background-size: cover;
   background-position: center;
 }
 .github-logo{
   background-image: url("/logos/GitHub-Mark-120px-plus.png");
+  width: 100%;
+  height: 235px;
   background-size: cover;
   background-position: center;
 
@@ -598,6 +604,16 @@ label {
     grid-template-columns: 1fr;
     grid-template-rows:  1fr 1fr 1fr;
     grid-template-areas: "title" "fac" "card";
+  }
+  .container {
+    grid-area: card;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+    margin: 0 auto;
   }
 }
 

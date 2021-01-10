@@ -70,14 +70,16 @@ function restartTimer(){
 
 //   EVENT LISTENER FOR PLAY BUTTON 
 playButton.addEventListener("click", function(){
-   if (myTimer){  //--- NEED TO FIXXXX
-    setInterval(nextImage, 3000);    
-   }
+    if(!myTimer){
+    nextImage();
+    myTimer = setInterval(nextImage, 3000);
+    }
 });
 
 //   EVENT LISTENER FOR PAUSE BUTTON 
 pauseButton.addEventListener("click", function() { 
     clearInterval(myTimer);
+    myTimer = false;
 });
 
 //  NEXT BUTTON NAVIGATION 
