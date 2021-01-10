@@ -89,7 +89,7 @@ function nextImage(){
 
     if (currentSlide === carouselSlides[carouselSlides.length-1])
     {
-        // carousel.classList.add("hide-transition");
+        // carousel.classList.add("hide-transition"); TAKES SLIDE TO TARGET SLIDE WITHOUT TRANISITION
         translateToTargetSlide(carousel, currentSlide, carouselSlides[0]);
         const currentDot = carouselNav.querySelector(".active");
         const firstDot = navDots[0];

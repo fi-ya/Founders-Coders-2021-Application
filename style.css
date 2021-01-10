@@ -33,7 +33,7 @@ body {
   list-style: none; 
 }
 .navlinks li a {
-  margin-left: 0rem;
+  margin-left: 1rem;
   text-decoration: none; 
   color: white;
   padding: 1rem 2rem;
@@ -71,7 +71,7 @@ body {
   border-radius: 1rem; 
 }
 
-/* ------ Media Query for togglemenu ------ */
+/* ------ MEDIA QUERY FOR TOGGLEMENU ------ */
 
 @media (max-width: 600px) {
   .toggle-btn {
@@ -148,7 +148,7 @@ body {
   padding: 10px 30px;
   border: 1px solid #ffffff;
   transition: 0.6s ease;
-  border-radius: 0;
+  border-radius: 0.5rem;
 }
 .btn:hover {
   background-color: #ffffff;
@@ -179,7 +179,6 @@ body {
   align-items: center;
   font-size: 1.3rem;
 }
-
 .about-title {
   grid-area: title;
   background-color: rgb(233, 220, 224);
@@ -226,7 +225,7 @@ body {
   padding: 5%;
 }
 
-/* ------ Media Query for About Section ------ */
+/* ------ MEDIA QUERY FOR ABOUT SECTION ------ */
 
 @media only screen and (max-width: 600px) {
   #about-container {
@@ -236,7 +235,8 @@ body {
   }
 }
 
-/* ------ Paint STYLES ------ */
+/* ------ PAINT STYLES ------ */
+
 #paint-container {
   background-color: rgb(145, 112, 112);
   display: grid;
@@ -247,11 +247,11 @@ body {
     "content"
     "carousel"
     "radiobutton";
-  grid-gap: 0.1rem; /* column row gap*/
+  grid-gap: 0.1rem; 
   height: auto;
   color: white;
   font-size: 1rem;
-  text-align: justify; /* aligns all text in child div*/
+  text-align: justify; 
   margin: 0 auto;
 }
 .paint-title {
@@ -263,7 +263,6 @@ body {
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  
 }
 .paint-by-numbers {
   grid-area: content;
@@ -276,26 +275,27 @@ body {
   text-align: left;
   font-size: 1.3rem;
 }
-/* Carousel Styles Starts Here */
+
+/* ------ CAROUSEL STYLES ------ */
+
 .carousel-wrapper {
   grid-area: carousel;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
-  
 }
 .carousel-container {
-  width: 80%; /* make image resposinve*/
+  width: 80%; 
   height: auto;
-  margin: 0 auto; /* center image */
+  margin: 0 auto; 
   position: relative;
 }
 .carousel-track-container {
   width: 100%;
   height: 270px;
   position: relative;
-  overflow: hidden; /* hide images that overflow container*/
+  overflow: hidden; 
 }
 .carousel-track {
   padding: 0;
@@ -316,11 +316,11 @@ body {
 .carousel-slide img {
   width: 100%;
   height: 270px;
-  object-fit: cover; /* so images dont stretch when window wider*/
+  object-fit: cover; 
 }
 .carousel-button {
   position: absolute;
-  transform: translateY(-50%); /* center buttons*/
+  transform: translateY(-50%); 
   background: transparent;
   border: none;
   cursor: pointer;
@@ -328,11 +328,11 @@ body {
 }
 .prev-btn {
   top: 50%;
-  left: -3.5rem;
+  left: -2.5rem;
 }
 .next-btn {
   top: 50%;
-  right: -3.5rem;
+  right: -2.5rem;
 }
 .play-btn {
   top: 90%;
@@ -353,7 +353,6 @@ button .size img {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  /* padding: 0.5rem 0; */
 }
 .nav-dot {
   background: rgba(255, 255, 255, 0.3);
@@ -368,9 +367,10 @@ button .size img {
   background: rgb(255, 255, 255, 1);
 }
 .hide-btn {
-  display: none; /* default hide prev button */
+  display: none; 
 }
-/* Carousel Styles Ends Here */
+
+/* ------ RADIO BUTTON STYLES ------ */
 
 .paint-radiobtn-wrapper {
   grid-area: radiobutton;
@@ -398,7 +398,7 @@ fieldset span{
   display: inline-block;
   padding: 2rem 1rem 1rem 2rem;
   font-family: var(--cursive-font);
-  font-size:1.5rem;
+  font-size:2rem;
 }
 fieldset > legend {
   margin-left: 1rem;
@@ -406,7 +406,6 @@ fieldset > legend {
   padding: 1rem 2rem;
   margin: 1rem 0.5rem 0.8rem 0.5rem;
   border-radius: 0.3rem;
-  /* text-align: center; */
 }
 label {
   padding: 1rem 0.5rem;
@@ -414,7 +413,6 @@ label {
 .answers{
   padding-left: 3.5rem;
 }
-
 .answer-button {
   display: flex;
   justify-content: center;
@@ -428,7 +426,6 @@ label {
   border-radius: 0.2rem;
   background-color: transparent;
   color: white;
-  
 }
 .buttonstyle:hover {
   background-color: white;
@@ -436,7 +433,7 @@ label {
   color: rgb(79, 64, 66);
 }
 
-/* ------ Media Query for Paint Section ------ */
+/* ------ MEDIA QUERY FOR PAINT SECTION ------ */
 
 @media only screen and (max-width: 600px) {
   #paint-container {
@@ -445,6 +442,7 @@ label {
     grid-template-areas: "title" "content" "carousel" "radiobutton";
   }
 }
+
 /* ------ FAC STYLES ------ */
 
 #fac-container {
@@ -456,11 +454,11 @@ label {
     "title "
     "fac "
     "card";
-  grid-gap: 0.1rem; /* column row gap*/
+  grid-gap: 0.1rem; 
   height: auto;
   color: #4e3d40;
   font-size: 1rem;
-  text-align: justify; /* aligns all text in child div*/
+  text-align: justify;
 }
 .fac-title {
   grid-area: title;
@@ -471,7 +469,6 @@ label {
   align-items: center;
   text-align: center;
   margin-top: 0 auto;
-  
 }
 .fac-answer {
   grid-area: fac;
@@ -499,8 +496,6 @@ label {
 }
 .fac-answer h2{
   font-family: var(--cursive-font);
-
-  
 }
 .container {
   grid-area: card;
@@ -512,7 +507,6 @@ label {
   margin: 0 auto;
 }
 .container .card {
-  /*contains div for logo and content */
   position: relative;
   width: 80%;
   height: auto;
@@ -554,37 +548,32 @@ label {
   height: 235px;
   background-size: cover;
   background-position: center;
-
 }
-.container .card .imgLogo img {
+.imgLogo img {
   width: 180px;
   height: auto;
   margin: 0 auto;
-
 }
-.container .card .content {
-  /* contains h2 p */
+.card .content {
   position: relative;
   bottom: 0.6rem;
   padding-bottom: 1.25rem;
   text-align: center;
   color: rgb(79, 64, 66);
 }
-.container .card .content h2 {
-  /* content heading*/
+.content h2 {
   font-size: 2rem;
   padding: 1.9rem 1.5rem;
   color: rgb(79, 64, 66);
 }
-.container .card .content p {
-  /* content pargraph*/
+.content p {
   text-align: center;
   font-size: 1.2rem;
   color: rgb(79, 64, 66);
   padding: 0 0.5rem;
   margin: 0 1rem;
 }
-.container .card .content p .tips{
+p .tips{
   text-align: justify;
 }
 .link{
@@ -608,7 +597,7 @@ label {
   color: #F2F2F2;
 }
 
-/* ------ Media Query for FAC Section ------ */
+/* ------ MEDIA QUERY FOR FAC SECTION ------ */
 
 @media only screen and (max-width: 600px) {
   #fac-container {
@@ -629,6 +618,7 @@ label {
 }
 
 /* ------ CONTACT STYLES ------ */
+
 #contact-container {
   display: flex;
   flex-direction: column;
@@ -639,7 +629,6 @@ label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("bck-img.jpg");
   background-size: cover;
   background-position: center;
-  
 }
 .contact {
   position: relative;
@@ -647,35 +636,30 @@ label {
   justify-content: center;
   align-content: center;
 }
-.contact .thank-you {
+.thank-you {
   color:#F2F2F2;
   font-size: 1.3rem;
   padding-left: 1rem;
- 
 }
-.contact .thank-you h1{
+.thank-you h1{
   font-family: var(--cursive-font);
   font-size: 2.5rem;
   text-align: center;
 }
-
-.contact .thank-you li{
+.thank-you li{
   list-style: square;
   padding: 0;
   margin:0;
-  
 }
-
-
 .email{
   text-align: center;
   margin: 2rem auto;
 }
-.contact .thank-you a:hover{
-  background-color: white; /* change on hover*/
+.thank-you a:hover{
+  background-color: white; 
   color: #000000;
 }
-.contact .thank-you a{
+.thank-you a{
   position: relative;
   padding: 0.6rem 1.25rem;
   border-radius: 2.5rem;
@@ -683,12 +667,12 @@ label {
   margin: 1rem auto;
   border: 1px solid #ffffff;
   color:white;
-
 }
+
 /* ------ FOOTER STYLES ------ */
 
 .footer-container {
-  background-color: rgb(79, 64, 66); /* #733E39; */
+  background-color: rgb(79, 64, 66); 
   position: relative;
   margin: 0 auto;
   padding: 2rem 1.5rem 1.5rem 1.5rem;
@@ -700,7 +684,7 @@ label {
   padding: 0.5rem;
 }
 .footer-links li a:hover {
-  background-color: white; /* change on hover*/
+  background-color: white; 
   color: #000000;
   border-radius: 0.5rem;
 }
@@ -714,7 +698,6 @@ label {
 .footer-logo img{
   width: 2rem;
   border-radius: 50%;
-  
 }
 .copyright p{
   padding-top: 1rem;
