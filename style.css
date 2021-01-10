@@ -172,19 +172,25 @@ body {
 #about-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* 3 columns*/
-  grid-template-rows: 0.5fr 1.5fr 1fr; /* 3 columns*/
+  grid-template-rows: 0.3fr 1fr 1fr; /* 3 columns*/
   grid-template-areas:
     "title title title" /*defines area by name*/
     "content1 img content4"
     "content2 content3 content5";
-  grid-gap: 0.5rem; /* column row gap*/
+  grid-gap: 0.1rem; /* column row gap*/
   height: auto;
   background-color: rgb(233, 220, 224);
   color: rgb(78, 61, 64);
   font-size: 0.9rem;
-  text-align: justify; /* aligns all text in child div*/
+  text-align: left; /* aligns all text in child div*/
   margin: 0 auto;
 }
+.txt{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-title {
   grid-area: title;
   background-color: rgb(233, 220, 224);
@@ -245,14 +251,14 @@ body {
 #paint-container {
   background-color: rgb(145, 112, 112);
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-template-columns: 1.5fr;
+  grid-template-rows: 0.3fr 0.3fr 0.5fr 0.5fr;
   grid-template-areas:
-    "title title"
-    "content content"
-    "carousel carousel"
-    "radiobutton radiobutton";
-  grid-gap: 0.5rem; /* column row gap*/
+    "title"
+    "content"
+    "carousel"
+    "radiobutton";
+  grid-gap: 0.1rem; /* column row gap*/
   height: auto;
   color: white;
   font-size: 1rem;
@@ -278,7 +284,7 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 0 2rem;
-  text-align: justify;
+  text-align: left;
 }
 /* Carousel Styles Starts Here */
 .carousel-wrapper {
@@ -454,12 +460,12 @@ label {
   background-color: rgb(187, 143, 151);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.3fr 0.5fr 0.5fr;
+  grid-template-rows: 0.2fr 0.5fr 0.6fr;
   grid-template-areas:
     "title "
     "fac "
     "card";
-  grid-gap: 0.5rem; /* column row gap*/
+  grid-gap: 0.1rem; /* column row gap*/
   height: auto;
   color: #4e3d40;
   font-size: 1rem;
@@ -483,7 +489,7 @@ label {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 .fac-answer h1 {
   display: flex;
