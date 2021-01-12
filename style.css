@@ -452,13 +452,13 @@ label {
   background-color: rgb(187, 143, 151);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 0.5fr 0.6fr;
+  grid-template-rows: 0.2fr 0.1fr 0.2fr;
   grid-template-areas:
     "title "
     "fac "
     "card";
-  grid-gap: 0.1rem; 
-  height: auto;
+  grid-gap: 0.2rem; 
+  /* height: auto; */
   color: white;
   font-size: 1rem;
   text-align: justify;
@@ -472,30 +472,31 @@ label {
   align-items: center;
   text-align: center;
   margin-top: 0 auto;
+
 }
 .fac-answer {
   grid-area: fac;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
   align-items: center;
   margin: 0 auto;
   padding: 0 2rem;
   font-size:1.3rem;
 }
-.fac-answer h1 {
-  display: flex;
+/* .fac-answer h1 {
+  /* display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
-}
+} */
 .fac-answer p{
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   align-items: center;
   padding: 1rem 1rem;
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 .fac-answer h2{
   font-family: var(--cursive-font);
@@ -512,9 +513,8 @@ label {
 .container .card {
   position: relative;
   width: 80%;
-  height: auto;
   background: #F2F2F2;
-  height: auto;
+  /* height: auto; */
   margin: 1rem;
   border-radius: 1.25rem;
   overflow: hidden;
@@ -522,7 +522,7 @@ label {
   transition: 0.5s;
 }
 .container:hover .card {
-  filter: blur(1.25rem);
+  filter: blur(1rem);
   transform: scale(0.9);
   opacity: 0.5;
 }
@@ -616,8 +616,9 @@ p .tips{
 @media only screen and (max-width: 600px) {
   #fac-container {
     grid-template-columns: 1fr;
-    grid-template-rows:  1fr 1fr 1fr;
+    grid-template-rows:  0.1fr 0.2fr 0.3fr;
     grid-template-areas: "title" "fac" "card";
+    grid-gap:0.2rem;
   }
   .container {
     grid-area: card;
