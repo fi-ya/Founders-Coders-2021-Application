@@ -522,7 +522,7 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1.25rem 1.25rem 1.25rem;
+  padding: 0 1.25rem 2rem 1.25rem;
   margin: 0 auto;
 }
 .container .card {
@@ -641,7 +641,7 @@ p.tips{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem 1rem;
     margin: 0 auto;
   }
 }
