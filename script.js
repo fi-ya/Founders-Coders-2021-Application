@@ -201,20 +201,25 @@ function keyboardNav (e){
 document.addEventListener("keydown", keyboardNav);
     
 //  READ MORE BUTTON ON FCC CARD
-function readMore(){
-    const dots = document.getElementById("dots");
-    const moreText = document.getElementById("more-text");
-    const readBtn = document.getElementById("read-btn");
+document.addEventListener( "click", function(e){
+    readMore(e);
+})
 
-    if(dots.style.display === "none"){
-        dots.style.display = "inline";
-        readBtn.innerHTML = "Read More";
-        moreText.style.display = "none";
+function readMore(e){
+
+    const parentElement = e.target.parentElement;
+    const readMoredots = parentElement.querySelector(".read-more-dots");
+    const readMoreContent = parentElement.querySelector(".read-more-content");
+    
+    if( readMoredots.style.display === "none"){
+        readMoredots.style.display = "inline";
+        e.target.innerHTML = "Read More";
+        readMoreContent.style.display = "none";
     }
     else {
-        dots.style.display = "none";
-        readBtn.innerHTML = "Read Less";
-        moreText.style.display = "inline"
+        readMoredots.style.display = "none";
+        e.target.innerHTML = "Read Less";
+        readMoreContent.style.display = "inline"
     }
 }
 

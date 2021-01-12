@@ -593,16 +593,18 @@ label {
 p.tips{
   text-align: left;
 }
-#more-text{
+.read-more-content{
   display: none;
 }
-#read-btn{
+.read-more-btn{
   background:none;
   color: inherit;
   border: none;
   padding: 0;
   font:inherit;
   outline:inherit;
+  font-weight: bold;
+  color:blue;
 }
 .link{
   position: relative;
