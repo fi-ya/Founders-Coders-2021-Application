@@ -211,6 +211,9 @@ body {
   grid-area: img;
   margin: 0 auto;
   padding: 5%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
 }
 .me-img {
   width:100%;
@@ -238,7 +241,7 @@ body {
 @media only screen and (max-width: 600px) {
   #about-container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "title" "content1" "content2" "img" "content3" "content4" "content5";
   }
 }
@@ -663,11 +666,10 @@ p .tips{
   margin:0;
 }
 .dryeyes{
-  background:rgba(243, 241, 239, 0.5);
+  background:rgba(243, 241, 239, 0.6);
   border-radius: 0.5rem;
   padding: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
+  color:rgb(79, 64, 66); 
 
 }
 .email{
