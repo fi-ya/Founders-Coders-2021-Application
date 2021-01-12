@@ -163,12 +163,12 @@ body {
 #about-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 0.3fr 1fr 1fr; 
+  grid-template-rows: 0.2fr 1fr 1fr; 
   grid-template-areas:
     "title title title" 
     "content1 img content4"
     "content2 content3 content5";
-  grid-gap: 0.1rem; 
+  grid-gap: 0.2rem; 
   height: auto;
   background-color: rgb(233, 220, 224);
   color: rgb(78, 61, 64);
@@ -191,7 +191,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 auto;
 }
 .about-content1 {
   grid-area: content1;
@@ -226,6 +225,7 @@ body {
   grid-area: content5;
   margin: 0 auto;
   padding: 5%;
+  padding-top: 0;
 }
 
 /* ------ MEDIA QUERY FOR ABOUT SECTION ------ */
@@ -233,7 +233,7 @@ body {
 @media only screen and (max-width: 600px) {
   #about-container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1.5fr 1.2fr 0.5fr 1.2fr 1.5fr 1.2fr;
+    grid-template-rows: 0.5fr 1fr 1fr 0.5fr 1fr 1fr 1fr;
     grid-template-areas: "title" "content1" "content2" "img" "content3" "content4" "content5";
   }
 }
@@ -243,14 +243,14 @@ body {
 #paint-container {
   background-color: rgb(145, 112, 112);
   display: grid;
-  grid-template-columns: 1.5fr;
-  grid-template-rows: 0.3fr 0.3fr 0.5fr 0.5fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 0.3fr 0.5fr 0.3fr;
   grid-template-areas:
     "title"
     "content"
     "carousel"
     "radiobutton";
-  grid-gap: 0.1rem; 
+  grid-gap: 0.2rem; 
   height: auto;
   color: white;
   font-size: 1rem;
@@ -382,7 +382,7 @@ button .size img {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 2rem 2rem;
+  padding: 0 2rem;
   font-size: 1.3rem;
 }
 .paint-radiobtn-container {
@@ -452,13 +452,13 @@ label {
   background-color: rgb(187, 143, 151);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 0.1fr 0.2fr;
+  grid-template-rows: 0.2fr 0.3fr 0.3fr;
   grid-template-areas:
     "title "
     "fac "
     "card";
   grid-gap: 0.2rem; 
-  /* height: auto; */
+  height: auto;
   color: white;
   font-size: 1rem;
   text-align: justify;
@@ -476,23 +476,12 @@ label {
 }
 .fac-answer {
   grid-area: fac;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   align-items: center;
   margin: 0 auto;
   padding: 0 2rem;
   font-size:1.3rem;
 }
-/* .fac-answer h1 {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-} */
 .fac-answer p{
-  /* display: flex;
-  justify-content: center; */
   align-items: center;
   padding: 1rem 1rem;
   text-align: left;
@@ -514,7 +503,7 @@ label {
   position: relative;
   width: 80%;
   background: #F2F2F2;
-  /* height: auto; */
+  height: auto;
   margin: 1rem;
   border-radius: 1.25rem;
   overflow: hidden;
