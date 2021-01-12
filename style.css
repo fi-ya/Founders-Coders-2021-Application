@@ -567,14 +567,13 @@ label {
   color: rgb(79, 64, 66);
 }
 .content p {
-  text-align: center;
   font-size: 1.2rem;
   color: rgb(79, 64, 66);
   padding: 0 0.5rem;
   margin: 0 1rem;
 }
-p .tips{
-  text-align: justify;
+p.tips{
+  text-align: left;
 }
 #more-text{
   display: none;
@@ -654,23 +653,19 @@ p .tips{
 .thank-you {
   color:#F2F2F2;
   font-size: 1.3rem;
+  text-align: center;
 }
 .thank-you h1{
   font-family: var(--cursive-font);
   font-size: 2.5rem;
   text-align: center;
 }
-.thank-you li{
-  list-style: square;
-  padding: 0;
-  margin:0;
-}
 .dryeyes{
   background:rgba(243, 241, 239, 0.6);
   border-radius: 0.5rem;
   padding: 1.5rem;
   color:rgb(79, 64, 66); 
-
+  text-align: left;
 }
 .email{
   text-align: center;
