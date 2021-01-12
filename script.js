@@ -200,7 +200,23 @@ function keyboardNav (e){
 //   EVENT LISTENER FOR KEYBOARD NAVIGATION 
 document.addEventListener("keydown", keyboardNav);
     
+//  READ MORE BUTTON ON FCC CARD
+function readMore(){
+    const dots = document.getElementById("dots");
+    const moreText = document.getElementById("more-text");
+    const readBtn = document.getElementById("read-btn");
 
+    if(dots.style.display === "none"){
+        dots.style.display = "inline";
+        readBtn.innerHTML = "Read More";
+        moreText.style.display = "none";
+    }
+    else {
+        dots.style.display = "none";
+        readBtn.innerHTML = "Read Less";
+        moreText.style.display = "inline"
+    }
+}
 
 
 

@@ -515,7 +515,7 @@ label {
   height: auto;
   background: #F2F2F2;
   height: auto;
-  /* margin: 1.25rem; */
+  margin: 1rem;
   border-radius: 1.25rem;
   overflow: hidden;
   box-shadow: 0 0.9rem 1.5rem rgba(0, 0, 0, 0.5);
@@ -578,6 +578,17 @@ label {
 }
 p .tips{
   text-align: justify;
+}
+#more-text{
+  display: none;
+}
+#read-btn{
+  background:none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font:inherit;
+  outline:inherit;
 }
 .link{
   position: relative;
