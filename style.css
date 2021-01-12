@@ -637,7 +637,7 @@ p .tips{
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 2rem 1rem 1rem 2rem;
+  padding: 1.5rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("bck-img.jpg");
   background-size: cover;
   background-position: center;
@@ -651,7 +651,6 @@ p .tips{
 .thank-you {
   color:#F2F2F2;
   font-size: 1.3rem;
-  padding-left: 1rem;
 }
 .thank-you h1{
   font-family: var(--cursive-font);
@@ -662,6 +661,14 @@ p .tips{
   list-style: square;
   padding: 0;
   margin:0;
+}
+.dryeyes{
+  background:rgba(243, 241, 239, 0.5);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .email{
   text-align: center;
