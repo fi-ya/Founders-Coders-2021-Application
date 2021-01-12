@@ -459,7 +459,7 @@ label {
     "card";
   grid-gap: 0.1rem; 
   height: auto;
-  color: #4e3d40;
+  color: white;
   font-size: 1rem;
   text-align: justify;
 }
@@ -695,7 +695,7 @@ p .tips{
 .footer-links li a{
   text-decoration: none;
   color: white;
-  padding: 0.5rem;
+  padding: 0.2rem;
 }
 .footer-links li a:hover {
   background-color: white; 
