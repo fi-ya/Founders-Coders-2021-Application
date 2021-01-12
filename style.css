@@ -283,7 +283,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 1rem;
   padding: 0 2rem;
   text-align: left;
   font-size: 1.3rem;
@@ -296,7 +296,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 1rem;
+  margin:1rem;
 }
 .carousel-container {
   width: 80%; 
@@ -392,7 +393,7 @@ button .size img {
   justify-content: space-between;
   align-items: center;
   margin: 2rem auto;
-  padding: 0 2rem;
+  padding: 0 0.5rem;
   font-size: 1.3rem;
 }
 .paint-radiobtn-container {
@@ -454,14 +455,17 @@ label {
     grid-template-rows: 0.5fr 1fr 1fr;
     grid-template-areas: "title" "content" "carousel" "radiobutton";
   }
+  .carousel-wrapper {
+    margin:0;
+  }
   .carousel-track-container {
-    height: 270px;
+    height: 300px;
   }
   .carousel-slide img {
-    height: 270px;
+    height: 300px;
   }
   .carousel-nav{
-    top:270px;
+    top:310px;
   }
   .paint-radiobtn-wrapper {
     margin: 0 auto;
@@ -493,7 +497,7 @@ label {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 0 auto;
+  margin: 0 auto;
 
 }
 .fac-answer {
@@ -533,7 +537,7 @@ label {
   transition: 0.5s;
 }
 .container:hover .card {
-  filter: blur(1rem);
+  filter: blur(0.4rem);
   transform: scale(0.9);
   opacity: 0.5;
 }
