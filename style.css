@@ -76,7 +76,7 @@ body {
 
 /* ------ MEDIA QUERY FOR TOGGLEMENU ------ */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .toggle-btn {
     display: flex; 
   }
@@ -87,7 +87,7 @@ body {
   }
   .navbar {
     flex-direction: column; 
-    align-items: center; 
+    align-items: flex-start; 
   }
   .navlinks ul {
     width: 100%;
@@ -238,10 +238,10 @@ body {
 
 /* ------ MEDIA QUERY FOR ABOUT SECTION ------ */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   #about-container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
     grid-template-areas: "title" "content1" "content2" "img" "content3" "content4" "content5";
   }
 }
@@ -446,7 +446,7 @@ label {
 
 /* ------ MEDIA QUERY FOR PAINT SECTION ------ */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   #paint-container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1fr 1fr;
@@ -609,7 +609,7 @@ p.tips{
 
 /* ------ MEDIA QUERY FOR FAC SECTION ------ */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   #fac-container {
     grid-template-columns: 1fr;
     grid-template-rows:  0.1fr 0.2fr 0.3fr;
@@ -626,10 +626,27 @@ p.tips{
     padding: 1rem;
     margin: 0 auto;
   }
-
-
-
 }
+
+/* @media only screen and (min-width: 650px) {
+  #fac-container {
+    grid-template-columns: 1fr;
+    grid-template-rows:  0.1fr 0.2fr 0.3fr;
+    grid-template-areas: "title" "fac" "card";
+    grid-gap:0.2rem;
+    
+  }
+  .container {
+    grid-area: card;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 auto;
+    width:80%;
+  }
+} */
 
 /* ------ CONTACT STYLES ------ */
 
