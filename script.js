@@ -1,14 +1,20 @@
 
-// HOMEPAGETOGGLE MENU  
-document.getElementById("togglemenu").addEventListener('click', ()=> {
-    document.getElementById('mobilemenu').classList.toggle('active');
+// HOMEPAGE TOGGLE MENU  
+console.log(document.getElementsByClassName("menulink"));
+document.getElementById("togglemenu").addEventListener("click", ()=> {
+    document.getElementById("mobilemenu").classList.toggle("active");
 });
 
+// CLOSE TOGGLE MENU ON LINK CLICK
+document.querySelectorAll(".menulink").forEach( menuLink => menuLink.addEventListener("click", ()=>{
+    document.getElementById("mobilemenu").classList.toggle("active");
+}));
+
 // HOMEPAGE WELCOME GREETING
-const homepageGreetings = [ 'Welcome' ,'Bienvenidos' , 'أهلا بك' , 'स्वागत हे' , '欢迎' ]
+const homepageGreetings = [ "Welcome" ,"Bienvenidos" , "أهلا بك" , "स्वागत हे" , "欢迎" ]
 var counter = 0;
     setInterval(function() {
-        document.getElementById('greeting').innerHTML = homepageGreetings[counter];
+        document.getElementById("greeting").innerHTML = homepageGreetings[counter];
         counter++;
         if (counter >= homepageGreetings.length){
             counter = 0;
@@ -200,7 +206,29 @@ function keyboardNav (e){
 //   EVENT LISTENER FOR KEYBOARD NAVIGATION 
 document.addEventListener("keydown", keyboardNav);
     
+//  READ MORE BUTTON ON FCC CARD
 
+document.querySelector(".read-more-btn").addEventListener( "click", function(e){
+    readMore(e);
+});
+
+function readMore(e){
+
+    const parentElement = e.target.parentElement;
+    const readMoredots = parentElement.querySelector(".read-more-dots");
+    const readMoreContent = parentElement.querySelector(".read-more-content");
+
+    if( readMoredots.style.display === "none"){
+        readMoredots.style.display = "inline";
+        e.target.innerHTML = "Read More";
+        readMoreContent.style.display = "none";
+    }
+    else {
+        readMoredots.style.display = "none";
+        e.target.innerHTML = "Read Less";
+        readMoreContent.style.display = "inline"
+    }
+}
 
 
 
