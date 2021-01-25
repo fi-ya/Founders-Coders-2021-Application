@@ -58,16 +58,16 @@ body {
   margin: 0.5rem;
 }
 .toggle-btn {
-  position: absolute; 
-  top: 2rem; 
-  right: 1rem;
   display: none; 
+  position: absolute; 
+  top: 2.7rem; 
+  right: 1.5rem;
   flex-direction: column; 
   justify-content: space-between; 
-  width: 30px;
-  height: 21px;
+  width: 2rem;
+  height: 1.6rem;
 }
-.toggle-btn .bar {
+.bar1, .bar2, .bar3 {
   height: 0.2rem;
   width: 100%; 
   background-color: white;
@@ -76,14 +76,14 @@ body {
 
 /* ------ MEDIA QUERY FOR TOGGLEMENU ------ */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .toggle-btn {
     display: flex; 
   }
   .navlinks {
     display: none; 
     width: 100%; 
-    height: 100vh; 
+    height: 71vh; 
   }
   .navbar {
     flex-direction: column; 
@@ -99,11 +99,15 @@ body {
   }
   .navlinks li a {
     padding: 1.7rem 1rem; 
-    border-radius: 0; 
+    border-radius: 0;
+    margin: 1.5rem; 
   }
   div.active {
     display: flex; 
     z-index: 3;
+  }
+  .navlinks li a.home {
+    display: none;
   }
 }
 
@@ -163,18 +167,19 @@ body {
 #about-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 0.3fr 1fr 1fr; 
+  grid-template-rows: 0.2fr 1fr 1fr; 
   grid-template-areas:
     "title title title" 
     "content1 img content4"
     "content2 content3 content5";
-  grid-gap: 0.1rem; 
+  grid-gap: 0.2rem; 
   height: auto;
   background-color: rgb(233, 220, 224);
   color: rgb(78, 61, 64);
   font-size: 0.9rem;
   text-align: left; 
   margin: 0 auto;
+  padding: 1rem;
 }
 .txt{
   display:flex;
@@ -191,7 +196,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 auto;
+  margin: 2rem;
 }
 .about-content1 {
   grid-area: content1;
@@ -207,6 +212,9 @@ body {
   grid-area: img;
   margin: 0 auto;
   padding: 5%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
 }
 .me-img {
   width:100%;
@@ -226,14 +234,15 @@ body {
   grid-area: content5;
   margin: 0 auto;
   padding: 5%;
+  padding-top: 0;
 }
 
 /* ------ MEDIA QUERY FOR ABOUT SECTION ------ */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   #about-container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1.5fr 1.2fr 0.5fr 1.2fr 1.5fr 1.2fr;
+    grid-template-rows: 0.2fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
     grid-template-areas: "title" "content1" "content2" "img" "content3" "content4" "content5";
   }
 }
@@ -243,14 +252,14 @@ body {
 #paint-container {
   background-color: rgb(145, 112, 112);
   display: grid;
-  grid-template-columns: 1.5fr;
-  grid-template-rows: 0.3fr 0.3fr 0.5fr 0.5fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 0.2fr 0.5fr 0.3fr;
   grid-template-areas:
     "title"
     "content"
     "carousel"
     "radiobutton";
-  grid-gap: 0.1rem; 
+  grid-gap: 0.2rem; 
   height: auto;
   color: white;
   font-size: 1rem;
@@ -266,6 +275,7 @@ body {
   align-items: center;
   text-align: center;
   margin: 0 auto;
+  margin-top: 2rem;
 }
 .paint-by-numbers {
   grid-area: content;
@@ -273,7 +283,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 1rem;
   padding: 0 2rem;
   text-align: left;
   font-size: 1.3rem;
@@ -286,7 +296,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 1rem;
+  margin:1rem;
 }
 .carousel-container {
   width: 80%; 
@@ -296,7 +307,7 @@ body {
 }
 .carousel-track-container {
   width: 100%;
-  height: 270px;
+  height: 500px;
   position: relative;
   overflow: hidden; 
 }
@@ -318,7 +329,7 @@ body {
 }
 .carousel-slide img {
   width: 100%;
-  height: 270px;
+  height: 500px;
   object-fit: cover; 
 }
 .carousel-button {
@@ -352,7 +363,7 @@ button .size img {
   width: 100%;
   height: 2rem;
   position: absolute;
-  top: 270px;
+  top: 510px;
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -381,8 +392,8 @@ button .size img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  padding: 2rem 2rem;
+  margin: 2rem auto;
+  padding: 0 0.5rem;
   font-size: 1.3rem;
 }
 .paint-radiobtn-container {
@@ -438,11 +449,26 @@ label {
 
 /* ------ MEDIA QUERY FOR PAINT SECTION ------ */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   #paint-container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1fr 1fr;
     grid-template-areas: "title" "content" "carousel" "radiobutton";
+  }
+  .carousel-wrapper {
+    margin:0;
+  }
+  .carousel-track-container {
+    height: 300px;
+  }
+  .carousel-slide img {
+    height: 300px;
+  }
+  .carousel-nav{
+    top:310px;
+  }
+  .paint-radiobtn-wrapper {
+    margin: 0 auto;
   }
 }
 
@@ -452,14 +478,14 @@ label {
   background-color: rgb(187, 143, 151);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.2fr 0.5fr 0.6fr;
+  grid-template-rows: 0.2fr 0.3fr 0.3fr;
   grid-template-areas:
     "title "
     "fac "
     "card";
-  grid-gap: 0.1rem; 
+  grid-gap: 0.2rem; 
   height: auto;
-  color: #4e3d40;
+  color: white;
   font-size: 1rem;
   text-align: justify;
 }
@@ -471,31 +497,21 @@ label {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 0 auto;
+  margin: 0 auto;
+
 }
 .fac-answer {
   grid-area: fac;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 0 auto;
   padding: 0 2rem;
   font-size:1.3rem;
 }
-.fac-answer h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-}
 .fac-answer p{
-  display: flex;
-  justify-content: center;
   align-items: center;
   padding: 1rem 1rem;
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 .fac-answer h2{
   font-family: var(--cursive-font);
@@ -506,23 +522,22 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1.25rem 1.25rem 1.25rem;
+  padding: 0 1.25rem 2rem 1.25rem;
   margin: 0 auto;
 }
 .container .card {
   position: relative;
   width: 80%;
-  height: auto;
   background: #F2F2F2;
   height: auto;
-  /* margin: 1.25rem; */
+  margin: 1rem;
   border-radius: 1.25rem;
   overflow: hidden;
   box-shadow: 0 0.9rem 1.5rem rgba(0, 0, 0, 0.5);
   transition: 0.5s;
 }
 .container:hover .card {
-  filter: blur(1.25rem);
+  filter: blur(0.4rem);
   transform: scale(0.9);
   opacity: 0.5;
 }
@@ -568,16 +583,32 @@ label {
   font-size: 2rem;
   padding: 1.9rem 1.5rem;
   color: rgb(79, 64, 66);
+  font-weight: bolder;
 }
 .content p {
-  text-align: center;
   font-size: 1.2rem;
   color: rgb(79, 64, 66);
   padding: 0 0.5rem;
   margin: 0 1rem;
 }
-p .tips{
-  text-align: justify;
+.username{
+  font-weight: bold;
+}
+p.tips{
+  text-align: left;
+}
+.read-more-content{
+  display: none;
+}
+.read-more-btn{
+  background:none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font:inherit;
+  outline:inherit;
+  font-weight: bold;
+  color:blue;
 }
 .link{
   position: relative;
@@ -602,11 +633,12 @@ p .tips{
 
 /* ------ MEDIA QUERY FOR FAC SECTION ------ */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   #fac-container {
     grid-template-columns: 1fr;
-    grid-template-rows:  1fr 1fr 1fr;
+    grid-template-rows:  0.1fr 0.2fr 0.3fr;
     grid-template-areas: "title" "fac" "card";
+    grid-gap:0.2rem;
   }
   .container {
     grid-area: card;
@@ -615,7 +647,7 @@ p .tips{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.25rem;
+    padding: 2rem 1rem;
     margin: 0 auto;
   }
 }
@@ -628,7 +660,7 @@ p .tips{
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 2rem 1rem 1rem 2rem;
+  padding: 1.5rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url("bck-img.jpg");
   background-size: cover;
   background-position: center;
@@ -642,17 +674,19 @@ p .tips{
 .thank-you {
   color:#F2F2F2;
   font-size: 1.3rem;
-  padding-left: 1rem;
+  text-align: center;
 }
 .thank-you h1{
   font-family: var(--cursive-font);
   font-size: 2.5rem;
   text-align: center;
 }
-.thank-you li{
-  list-style: square;
-  padding: 0;
-  margin:0;
+.dryeyes{
+  background:rgba(243, 241, 239, 0.6);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  color:rgb(79, 64, 66); 
+  text-align: left;
 }
 .email{
   text-align: center;
@@ -684,7 +718,7 @@ p .tips{
 .footer-links li a{
   text-decoration: none;
   color: white;
-  padding: 0.5rem;
+  padding: 0.2rem;
 }
 .footer-links li a:hover {
   background-color: white; 
