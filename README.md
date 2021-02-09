@@ -3,7 +3,7 @@
 **FAC Spring 2021 application website**
 
 I have built this one-page responsive website as part of my application for Founders & Coders Bootcamp using HTML, CSS & JavaScript.
-Click here to view my website https://fi-ya.github.io/myPortfolio/
+[Click](https://fi-ya.github.io/Founders-Coders-2021-Application/) to view my website 
 
 I hope you enjoy my website as much as i did making it.
 
