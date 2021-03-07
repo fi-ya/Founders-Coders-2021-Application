@@ -688,6 +688,9 @@ p.tips{
   color:rgb(79, 64, 66); 
   text-align: left;
 }
+.dryeyes > * + * {
+  margin-top: 1rem;
+}
 .email{
   text-align: center;
   margin: 2rem auto;
